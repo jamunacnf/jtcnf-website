@@ -6,18 +6,17 @@
   <title>JT CNF — Customs Clearing & Forwarding</title>
   <meta name="description" content="Professional customs clearance and freight forwarding services in Bangladesh.">
   <style>
-    /* Basic Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background-color: #f4f7f6; color: #333; }
+    body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
     
-    /* Header */
     header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
     header h1 { font-size: 24px; letter-spacing: 1px; }
-    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
     nav a:hover { color: #f39c12; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
+    .nav-btn:hover { background-color: #e67e22; }
     
-    /* Hero Section */
     .hero { background: linear-gradient(rgba(15, 43, 70, 0.8), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 120px 20px; }
     .hero h2 { font-size: 42px; margin-bottom: 20px; }
     .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; line-height: 1.6; }
@@ -27,7 +26,6 @@
     .btn-secondary { background-color: transparent; border: 2px solid white; color: white; }
     .btn-secondary:hover { background-color: white; color: #0f2b46; }
 
-    /* Services Section */
     .services { padding: 80px 20px; text-align: center; max-width: 1200px; margin: 0 auto; }
     .services h2 { color: #0f2b46; margin-bottom: 40px; font-size: 32px; }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -35,35 +33,37 @@
     .service-card h3 { margin-bottom: 15px; color: #0f2b46; }
     .service-card p { font-size: 14px; color: #666; line-height: 1.6; }
 
-    /* Footer */
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; }
     footer a { color: #f39c12; text-decoration: none; }
+    
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 15px; padding: 20px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>JT CNF</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h2>Your Trusted Partner in Customs Clearance & Freight Forwarding</h2>
     <p>Professional customs clearance and freight coordination support for importers and exporters, with primary operational experience at Dhaka Airport and Chattogram Port.</p>
-    <a href="#" class="btn btn-primary">Request a Quote</a>
-    <a href="#" class="btn btn-secondary">Pre-Assessment</a>
+    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+    <a href="quote.html" class="btn btn-secondary">Pre-Assessment</a>
   </section>
 
-  <!-- Services Section -->
   <section class="services">
     <h2>Our Services</h2>
     <div class="service-grid">
@@ -86,7 +86,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
     <p>Hotline: +880 1811470616</p>
