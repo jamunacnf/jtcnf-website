@@ -4,79 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — JT CNF</title>
-  <meta name="description" content="Get in touch with JT CNF for customs clearance and freight forwarding services. Call us at +880 1811470616.">
   <style>
-    /* Basic Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
     
-    /* Header */
     header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; letter-spacing: 1px; }
-    nav ul { list-style: none; display: flex; gap: 20px; }
+    header h1 { font-size: 24px; }
+    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
     nav a:hover, nav a.active { color: #f39c12; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
     
-    /* Page Title */
     .page-title { background-color: #0a1c2e; color: white; text-align: center; padding: 60px 20px; }
     .page-title h2 { font-size: 36px; margin-bottom: 10px; }
-    .page-title p { color: #ccc; }
-
-    /* Contact Section */
-    .contact-container { max-width: 1100px; margin: 50px auto; padding: 0 20px; display: flex; gap: 50px; }
     
-    /* Contact Info */
+    .contact-container { max-width: 1100px; margin: 50px auto; padding: 0 20px; display: flex; gap: 50px; }
     .contact-info { flex: 1; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .contact-info h3 { color: #0f2b46; margin-bottom: 20px; font-size: 24px; }
+    .contact-info h3 { color: #0f2b46; margin-bottom: 20px; }
     .info-item { margin-bottom: 20px; }
     .info-item strong { display: block; color: #333; margin-bottom: 5px; }
-    .info-item p { color: #666; }
     
-    .whatsapp-btn { 
-      display: inline-block; 
-      background-color: #25D366; 
-      color: white; 
-      padding: 12px 25px; 
-      text-decoration: none; 
-      border-radius: 5px; 
-      font-weight: bold; 
-      margin-top: 10px; 
-      text-align: center;
-    }
-    .whatsapp-btn:hover { background-color: #1ebe5d; }
-
-    /* Contact Form */
+    .whatsapp-btn { display: inline-block; background-color: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; text-align: center; }
+    
     .contact-form { flex: 1; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .contact-form h3 { color: #0f2b46; margin-bottom: 20px; font-size: 24px; }
+    .contact-form h3 { color: #0f2b46; margin-bottom: 20px; }
     .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
-    .form-group input, .form-group textarea { 
-      width: 100%; 
-      padding: 10px; 
-      border: 1px solid #ccc; 
-      border-radius: 5px; 
-      font-family: inherit;
-    }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
     .form-group textarea { height: 120px; resize: vertical; }
-    
-    .submit-btn { 
-      background-color: #f39c12; 
-      color: white; 
-      padding: 12px 30px; 
-      border: none; 
-      border-radius: 5px; 
-      font-weight: bold; 
-      cursor: pointer; 
-      width: 100%;
-      font-size: 16px;
-    }
-    .submit-btn:hover { background-color: #e67e22; }
+    .submit-btn { background-color: #f39c12; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; }
 
-    /* Footer */
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
-    footer a { color: #f39c12; text-decoration: none; }
-
-    /* Mobile Responsive */
+    
     @media (max-width: 768px) {
       header { flex-direction: column; gap: 15px; padding: 20px; }
       nav ul { flex-wrap: wrap; justify-content: center; }
@@ -86,7 +45,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>JT CNF</h1>
     <nav>
@@ -95,38 +53,27 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Page Title -->
   <section class="page-title">
     <h2>Contact Us</h2>
     <p>We are here to help you with your customs and freight needs.</p>
   </section>
 
-  <!-- Contact Section -->
   <section class="contact-container">
-    
-    <!-- Contact Information -->
     <div class="contact-info">
       <h3>Get in Touch</h3>
-      
       <div class="info-item">
         <strong>Hotline:</strong>
         <p>+880 1811470616</p>
       </div>
-      
       <div class="info-item">
         <strong>Service Locations:</strong>
         <p>Dhaka Airport & Chattogram Port, Bangladesh</p>
       </div>
-      
-      <div class="info-item">
-        <strong>Business Hours:</strong>
-        <p>Saturday - Thursday: 9:00 AM - 6:00 PM</p>
-      </div>
-
       <div class="info-item">
         <strong>WhatsApp Support:</strong>
         <p>Click below to chat with us directly.</p>
@@ -134,35 +81,28 @@
       </div>
     </div>
 
-    <!-- Contact Form -->
     <div class="contact-form">
       <h3>Send us a Message</h3>
       <form action="#" method="POST">
         <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          <label>Your Name</label>
+          <input type="text" required placeholder="Enter your full name">
         </div>
-        
         <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+          <label>Phone Number</label>
+          <input type="tel" required placeholder="Enter your phone number">
         </div>
-        
         <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+          <label>Your Message</label>
+          <textarea required placeholder="How can we help you?"></textarea>
         </div>
-        
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </div>
-
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
-    <p>Hotline: +880 1811470616</p>
   </footer>
 
 </body>
