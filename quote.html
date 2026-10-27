@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote — JT CNF</title>
+  <meta name="description" content="Request a quotation for customs clearance and freight forwarding services from JT CNF.">
+  <style>
+    /* Basic Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+    
+    /* Header */
+    header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 24px; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
+    nav a:hover { color: #f39c12; }
+    
+    /* Quote Button in Nav */
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
+    .nav-btn:hover { background-color: #e67e22; }
+
+    /* Page Title */
+    .page-title { background-color: #0a1c2e; color: white; text-align: center; padding: 60px 20px; }
+    .page-title h2 { font-size: 36px; margin-bottom: 10px; }
+    .page-title p { color: #ccc; }
+
+    /* Form Section */
+    .form-container { max-width: 800px; margin: 50px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .form-container h3 { color: #0f2b46; margin-bottom: 20px; font-size: 24px; text-align: center; }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+    .form-group input, .form-group select, .form-group textarea { 
+      width: 100%; 
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      font-family: inherit;
+    }
+    .form-group textarea { height: 100px; resize: vertical; }
+    
+    .form-row { display: flex; gap: 20px; }
+    .form-row .form-group { flex: 1; }
+
+    .submit-btn { 
+      background-color: #f39c12; 
+      color: white; 
+      padding: 15px 30px; 
+      border: none; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      width: 100%;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .submit-btn:hover { background-color: #e67e22; }
+
+    /* Footer */
+    footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
+    footer a { color: #f39c12; text-decoration: none; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 15px; padding: 20px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .form-row { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>JT CNF</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <h2>Request a Quote</h2>
+    <p>Tell us about your shipment and we will get back to you with a competitive quotation.</p>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="form-container">
+    <h3>Quotation Request Form</h3>
+    <form action="#" method="POST">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Company / Your Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name or company">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="service">Required Service *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Import Customs Clearance">Import Customs Clearance</option>
+            <option value="Export Customs Clearance">Export Customs Clearance</option>
+            <option value="Air Cargo Clearance">Air Cargo Clearance</option>
+            <option value="Sea Cargo Clearance">Sea Cargo Clearance</option>
+            <option value="Freight Coordination">Freight Coordination</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="type">Air or Sea *</label>
+          <select id="type" name="type" required>
+            <option value="">Select type</option>
+            <option value="Air">Air</option>
+            <option value="Sea">Sea</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="origin">Origin</label>
+          <input type="text" id="origin" name="origin" placeholder="e.g., China, Dubai">
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" name="destination" placeholder="e.g., Dhaka, Chattogram">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cargo">Cargo Description</label>
+          <input type="text" id="cargo" name="cargo" placeholder="e.g., Electronics, Garments">
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight / Volume</label>
+          <input type="text" id="weight" name="weight" placeholder="e.g., 500 kg, 2 CBM">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" placeholder="Any special requirements or details..."></textarea>
+      </div>
+      
+      <button type="submit" class="submit-btn">Submit Quote Request</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
+    <p>Hotline: +880 1811470616</p>
+  </footer>
+
+</body>
+</html>
