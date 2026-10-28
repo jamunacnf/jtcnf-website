@@ -7,12 +7,17 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-    header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; }
-    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+    
+    header { background-color: #0f2b46; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    header h1 { font-size: 24px; white-space: nowrap; }
+    nav ul { list-style: none; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
-    nav a:hover { color: #f39c12; }
+    nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
+    .header-actions { display: flex; gap: 10px; align-items: center; }
+    .action-btn { color: white; text-decoration: none; font-size: 13px; padding: 6px 12px; border-radius: 4px; border: 1px solid #2a4a6b; background-color: #1a3a5c; }
+    .whatsapp { background-color: #25D366; border-color: #25D366; }
+
     .page-title { background-color: #0a1c2e; color: white; text-align: center; padding: 60px 20px; }
     .form-container { max-width: 800px; margin: 50px auto; background: white; padding: 40px; border-radius: 8px; }
     .form-group { margin-bottom: 20px; }
@@ -22,23 +27,40 @@
     .form-row .form-group { flex: 1; }
     .submit-btn { background-color: #f39c12; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; font-size: 18px; }
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
-    @media (max-width: 768px) { header { flex-direction: column; gap: 15px; padding: 20px; } nav ul { flex-wrap: wrap; justify-content: center; } .form-row { flex-direction: column; gap: 0; } }
+    
+    @media (max-width: 1024px) {
+      header { flex-direction: column; gap: 15px; padding: 15px; }
+      .header-actions { width: 100%; justify-content: center; margin-top: 10px; }
+      .form-row { flex-direction: column; gap: 0; }
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>JT CNF</h1>
+    <div class="logo"><h1>JT CNF</h1></div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="quote.html" class="nav-btn active">Get a Quote</a></li>
       </ul>
     </nav>
+    <div class="header-actions">
+      <a href="mailto:jtcnf.bd@gmail.com" class="action-btn">✉️ Email</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
+      <a href="#" class="action-btn">📄 Company Profile</a>
+    </div>
   </header>
-  <section class="page-title"><h2>Request a Quote</h2><p>Tell us about your shipment.</p></section>
+
+  <section class="page-title">
+    <h2>Request a Quote</h2>
+    <p>Tell us about your shipment.</p>
+  </section>
+
   <section class="form-container">
     <form id="quoteForm">
       <div class="form-row">
@@ -68,7 +90,11 @@
       <button type="submit" class="submit-btn">Send Quote Request</button>
     </form>
   </section>
-  <footer><p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p></footer>
+
+  <footer>
+    <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
+  </footer>
+
   <script>
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
       e.preventDefault();
