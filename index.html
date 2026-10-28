@@ -4,50 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JT CNF — Customs Clearing & Forwarding</title>
-  <meta name="description" content="Professional customs clearance and freight forwarding services in Bangladesh.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-    header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; }
-    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+    
+    /* Header Styles */
+    header { background-color: #0f2b46; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    header h1 { font-size: 24px; white-space: nowrap; }
+    nav ul { list-style: none; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
-    nav a:hover { color: #f39c12; }
+    nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
+    .header-actions { display: flex; gap: 10px; align-items: center; }
+    .action-btn { color: white; text-decoration: none; font-size: 13px; padding: 6px 12px; border-radius: 4px; border: 1px solid #2a4a6b; background-color: #1a3a5c; transition: 0.3s; }
+    .action-btn:hover { background-color: #f39c12; border-color: #f39c12; }
+    .whatsapp { background-color: #25D366; border-color: #25D366; }
+    .whatsapp:hover { background-color: #1ebe5d; border-color: #1ebe5d; }
+    
+    /* Hero Section */
     .hero { background: linear-gradient(rgba(15, 43, 70, 0.8), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 120px 20px; }
     .hero h2 { font-size: 42px; margin-bottom: 20px; }
     .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; }
     .btn { padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin: 0 10px; }
     .btn-primary { background-color: #f39c12; color: white; }
+    .btn-primary:hover { background-color: #e67e22; }
     .btn-secondary { background-color: transparent; border: 2px solid white; color: white; }
+    .btn-secondary:hover { background-color: white; color: #0f2b46; }
+
+    /* Services Section */
     .services { padding: 80px 20px; text-align: center; max-width: 1200px; margin: 0 auto; }
     .services h2 { color: #0f2b46; margin-bottom: 40px; font-size: 32px; }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .service-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #f39c12; }
     .service-card h3 { margin-bottom: 15px; color: #0f2b46; }
+    
+    /* Footer */
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; }
-    @media (max-width: 768px) { header { flex-direction: column; gap: 15px; padding: 20px; } nav ul { flex-wrap: wrap; justify-content: center; } }
+    
+    /* Mobile */
+    @media (max-width: 1024px) {
+      header { flex-direction: column; gap: 15px; padding: 15px; }
+      .header-actions { width: 100%; justify-content: center; margin-top: 10px; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>JT CNF</h1>
+    <div class="logo">
+      <h1>JT CNF</h1> <!-- এখানে পরে লোগো ইমেজ বসাবেন -->
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
+    <div class="header-actions">
+      <a href="mailto:jtcnf.bd@gmail.com" class="action-btn">✉️ Email</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
+      <a href="#" class="action-btn">📄 Company Profile</a> <!-- এখানে PDF লিংক দেবেন -->
+    </div>
   </header>
+
+  <!-- Hero Section -->
   <section class="hero">
     <h2>Your Trusted Partner in Customs Clearance & Freight Forwarding</h2>
     <p>Professional customs clearance and freight coordination support for importers and exporters, with primary operational experience at Dhaka Airport and Chattogram Port.</p>
     <a href="quote.html" class="btn btn-primary">Request a Quote</a>
     <a href="contact.html" class="btn btn-secondary">Contact Us</a>
   </section>
+
+  <!-- Services Section -->
   <section class="services">
     <h2>Our Services</h2>
     <div class="service-grid">
@@ -57,6 +90,12 @@
       <div class="service-card"><h3>Sea Cargo Clearance</h3><p>Comprehensive clearance solutions for sea shipments at Chattogram Port.</p></div>
     </div>
   </section>
-  <footer><p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p><p>Hotline: +880 1811470616</p></footer>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
+    <p>Hotline: +880 1811470616</p>
+  </footer>
+
 </body>
 </html>
