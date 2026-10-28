@@ -7,37 +7,23 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-    
     header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
     header h1 { font-size: 24px; }
     nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
     nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
-    
     .page-title { background-color: #0a1c2e; color: white; text-align: center; padding: 60px 20px; }
-    .page-title h2 { font-size: 36px; margin-bottom: 10px; }
-    
     .services-section { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .service-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #f39c12; }
-    .service-card h3 { color: #0f2b46; margin-bottom: 15px; font-size: 22px; }
-    .service-card p { color: #555; margin-bottom: 15px; font-size: 15px; }
-    .service-card ul { margin-left: 20px; color: #666; font-size: 14px; }
-
-    .cta-section { background-color: #0f2b46; color: white; text-align: center; padding: 60px 20px; margin-top: 60px; }
-    .btn-primary { background-color: #f39c12; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; }
-    
+    .service-card { background: white; padding: 30px; border-radius: 8px; border-top: 4px solid #f39c12; }
+    .service-card h3 { color: #0f2b46; margin-bottom: 15px; }
+    .service-card ul { margin-left: 20px; color: #666; }
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; }
-    
-    @media (max-width: 768px) {
-      header { flex-direction: column; gap: 15px; padding: 20px; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
-    }
+    @media (max-width: 768px) { header { flex-direction: column; gap: 15px; padding: 20px; } nav ul { flex-wrap: wrap; justify-content: center; } }
   </style>
 </head>
 <body>
-
   <header>
     <h1>JT CNF</h1>
     <nav>
@@ -50,56 +36,17 @@
       </ul>
     </nav>
   </header>
-
-  <section class="page-title">
-    <h2>Our Services</h2>
-    <p>Comprehensive Customs Clearance & Freight Forwarding Solutions</p>
-  </section>
-
+  <section class="page-title"><h2>Our Services</h2><p>Comprehensive Customs Clearance & Freight Forwarding Solutions</p></section>
   <section class="services-section">
     <div class="services-grid">
-      <div class="service-card">
-        <h3>Import Customs Clearance</h3>
-        <p>We provide end-to-end customs clearance services for your import shipments.</p>
-        <ul><li>Documentation processing</li><li>Duty & tax assessment</li><li>Cargo release coordination</li></ul>
-      </div>
-      <div class="service-card">
-        <h3>Export Customs Clearance</h3>
-        <p>Efficient clearance processing for export cargo at major ports.</p>
-        <ul><li>Export documentation</li><li>Customs examination</li><li>Shipping bill processing</li></ul>
-      </div>
-      <div class="service-card">
-        <h3>Air Cargo Clearance</h3>
-        <p>Fast and reliable clearance services at Dhaka Airport.</p>
-        <ul><li>Airway bill processing</li><li>Airport customs handling</li><li>Urgent cargo clearance</li></ul>
-      </div>
-      <div class="service-card">
-        <h3>Sea Cargo Clearance</h3>
-        <p>Comprehensive clearance solutions at Chattogram Port.</p>
-        <ul><li>Bill of Lading handling</li><li>Port customs clearance</li><li>Container release support</li></ul>
-      </div>
-      <div class="service-card">
-        <h3>Freight Coordination</h3>
-        <p>We coordinate with shipping lines and airlines for smooth cargo movement.</p>
-        <ul><li>Carrier booking</li><li>Route planning</li><li>Cargo tracking support</li></ul>
-      </div>
-      <div class="service-card">
-        <h3>Documentation Support</h3>
-        <p>Complete assistance with import-export documentation.</p>
-        <ul><li>HS Code guidance</li><li>LC & Bank documentation</li><li>Regulatory compliance</li></ul>
-      </div>
+      <div class="service-card"><h3>Import Customs Clearance</h3><p>End-to-end clearance for import shipments.</p><ul><li>Documentation processing</li><li>Duty & tax assessment</li></ul></div>
+      <div class="service-card"><h3>Export Customs Clearance</h3><p>Efficient clearance for export cargo.</p><ul><li>Export documentation</li><li>Customs examination</li></ul></div>
+      <div class="service-card"><h3>Air Cargo Clearance</h3><p>Fast clearance at Dhaka Airport.</p><ul><li>Airway bill processing</li><li>Urgent cargo clearance</li></ul></div>
+      <div class="service-card"><h3>Sea Cargo Clearance</h3><p>Comprehensive clearance at Chattogram Port.</p><ul><li>Bill of Lading handling</li><li>Container release support</li></ul></div>
+      <div class="service-card"><h3>Freight Coordination</h3><p>Coordination with carriers for smooth movement.</p><ul><li>Carrier booking</li><li>Cargo tracking support</li></ul></div>
+      <div class="service-card"><h3>Documentation Support</h3><p>Assistance with import-export documentation.</p><ul><li>HS Code guidance</li><li>Regulatory compliance</li></ul></div>
     </div>
   </section>
-
-  <section class="cta-section">
-    <h2>Need help with your shipment?</h2>
-    <p style="margin-bottom: 30px;">Contact our expert team today for a fast and reliable quotation.</p>
-    <a href="quote.html" class="btn-primary">Request a Quote</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
-  </footer>
-
+  <footer><p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p></footer>
 </body>
 </html>
