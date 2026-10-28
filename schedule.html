@@ -7,29 +7,33 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-    header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; }
-    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+    
+    header { background-color: #0f2b46; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    header h1 { font-size: 24px; white-space: nowrap; }
+    nav ul { list-style: none; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
     nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
+    .header-actions { display: flex; gap: 10px; align-items: center; }
+    .action-btn { color: white; text-decoration: none; font-size: 13px; padding: 6px 12px; border-radius: 4px; border: 1px solid #2a4a6b; background-color: #1a3a5c; }
+    .whatsapp { background-color: #25D366; border-color: #25D366; }
+
     .page-title { background-color: #0a1c2e; color: white; text-align: center; padding: 60px 20px; }
-    .page-title h2 { font-size: 36px; margin-bottom: 10px; }
     .schedule-container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-    .schedule-section { background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .schedule-section { background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
     .schedule-section h3 { color: #0f2b46; margin-bottom: 20px; border-bottom: 2px solid #f39c12; padding-bottom: 10px; }
     table { width: 100%; border-collapse: collapse; margin-top: 15px; }
     th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; font-size: 14px; }
     th { background-color: #0f2b46; color: white; }
-    tr:hover { background-color: #f9f9f9; }
     .status { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
     .status-scheduled { background-color: #d4edda; color: #155724; }
     .status-updated { background-color: #fff3cd; color: #856404; }
     .note { font-size: 13px; color: #666; margin-top: 15px; font-style: italic; }
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
-    @media (max-width: 768px) {
-      header { flex-direction: column; gap: 15px; padding: 20px; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
+    
+    @media (max-width: 1024px) {
+      header { flex-direction: column; gap: 15px; padding: 15px; }
+      .header-actions { width: 100%; justify-content: center; margin-top: 10px; }
       table { font-size: 12px; }
       th, td { padding: 8px; }
     }
@@ -38,7 +42,7 @@
 <body>
 
   <header>
-    <h1>JT CNF</h1>
+    <div class="logo"><h1>JT CNF</h1></div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -49,100 +53,46 @@
         <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
+    <div class="header-actions">
+      <a href="mailto:jtcnf.bd@gmail.com" class="action-btn">✉️ Email</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
+      <a href="#" class="action-btn">📄 Company Profile</a>
+    </div>
   </header>
 
   <section class="page-title">
     <h2>Shipment Schedule</h2>
-    <p>Upcoming Air & Sea Cargo Schedules (Manually Managed)</p>
+    <p>Upcoming Air & Sea Cargo Schedules</p>
   </section>
 
   <section class="schedule-container">
-
-    <!-- Air Shipment -->
     <div class="schedule-section">
       <h3>✈️ Air Shipment Schedule</h3>
       <table>
         <thead>
-          <tr>
-            <th>Flight Date</th>
-            <th>Airport</th>
-            <th>Airline</th>
-            <th>Flight No.</th>
-            <th>Cargo Weight</th>
-            <th>Expected Landing</th>
-            <th>Clearing Schedule</th>
-            <th>Status</th>
-          </tr>
+          <tr><th>Flight Date</th><th>Airport</th><th>Airline</th><th>Flight No.</th><th>Cargo Weight</th><th>Expected Landing</th><th>Clearing Schedule</th><th>Status</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>05 Nov 2024</td>
-            <td>Dhaka (DAC)</td>
-            <td>Emirates SkyCargo</td>
-            <td>EK 5842</td>
-            <td>2,500 kg</td>
-            <td>08:30 AM</td>
-            <td>10:00 AM</td>
-            <td><span class="status status-scheduled">Scheduled</span></td>
-          </tr>
-          <tr>
-            <td>07 Nov 2024</td>
-            <td>Dhaka (DAC)</td>
-            <td>Turkish Cargo</td>
-            <td>TK 6412</td>
-            <td>1,800 kg</td>
-            <td>02:15 PM</td>
-            <td>04:00 PM</td>
-            <td><span class="status status-updated">Updated</span></td>
-          </tr>
-          <!-- Add more rows as needed -->
+          <tr><td>05 Nov 2024</td><td>Dhaka (DAC)</td><td>Emirates SkyCargo</td><td>EK 5842</td><td>2,500 kg</td><td>08:30 AM</td><td>10:00 AM</td><td><span class="status status-scheduled">Scheduled</span></td></tr>
+          <tr><td>07 Nov 2024</td><td>Dhaka (DAC)</td><td>Turkish Cargo</td><td>TK 6412</td><td>1,800 kg</td><td>02:15 PM</td><td>04:00 PM</td><td><span class="status status-updated">Updated</span></td></tr>
         </tbody>
       </table>
-      <p class="note">Last updated: 28 Oct 2024, 10:00 AM (BST). This schedule is manually maintained by JT CNF.</p>
+      <p class="note">Last updated: 28 Oct 2024, 10:00 AM (BST).</p>
     </div>
 
-    <!-- Sea Shipment -->
     <div class="schedule-section">
       <h3>🚢 Sea Shipment Schedule</h3>
       <table>
         <thead>
-          <tr>
-            <th>ETA</th>
-            <th>Port</th>
-            <th>Shipping Line</th>
-            <th>Vessel Name</th>
-            <th>Voyage No.</th>
-            <th>Cargo Weight</th>
-            <th>Clearing Schedule</th>
-            <th>Status</th>
-          </tr>
+          <tr><th>ETA</th><th>Port</th><th>Shipping Line</th><th>Vessel Name</th><th>Voyage No.</th><th>Cargo Weight</th><th>Clearing Schedule</th><th>Status</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>10 Nov 2024</td>
-            <td>Chattogram</td>
-            <td>Maersk Line</td>
-            <td>Maersk Sealand</td>
-            <td>V.2401</td>
-            <td>15,000 kg</td>
-            <td>12 Nov 2024</td>
-            <td><span class="status status-scheduled">Scheduled</span></td>
-          </tr>
-          <tr>
-            <td>15 Nov 2024</td>
-            <td>Chattogram</td>
-            <td>MSC</td>
-            <td>MSC Aurora</td>
-            <td>V.2405</td>
-            <td>22,000 kg</td>
-            <td>17 Nov 2024</td>
-            <td><span class="status status-updated">Updated</span></td>
-          </tr>
+          <tr><td>10 Nov 2024</td><td>Chattogram</td><td>Maersk Line</td><td>Maersk Sealand</td><td>V.2401</td><td>15,000 kg</td><td>12 Nov 2024</td><td><span class="status status-scheduled">Scheduled</span></td></tr>
+          <tr><td>15 Nov 2024</td><td>Chattogram</td><td>MSC</td><td>MSC Aurora</td><td>V.2405</td><td>22,000 kg</td><td>17 Nov 2024</td><td><span class="status status-updated">Updated</span></td></tr>
         </tbody>
       </table>
-      <p class="note">Last updated: 28 Oct 2024, 10:00 AM (BST). This schedule is manually maintained by JT CNF.</p>
+      <p class="note">Last updated: 28 Oct 2024, 10:00 AM (BST).</p>
     </div>
-
   </section>
 
   <footer>
