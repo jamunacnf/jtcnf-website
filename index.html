@@ -8,42 +8,28 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-    
     header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; letter-spacing: 1px; }
+    header h1 { font-size: 24px; }
     nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
     nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
     nav a:hover { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
-    .nav-btn:hover { background-color: #e67e22; }
-    
     .hero { background: linear-gradient(rgba(15, 43, 70, 0.8), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 120px 20px; }
     .hero h2 { font-size: 42px; margin-bottom: 20px; }
-    .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; line-height: 1.6; }
+    .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; }
     .btn { padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin: 0 10px; }
     .btn-primary { background-color: #f39c12; color: white; }
-    .btn-primary:hover { background-color: #e67e22; }
     .btn-secondary { background-color: transparent; border: 2px solid white; color: white; }
-    .btn-secondary:hover { background-color: white; color: #0f2b46; }
-
     .services { padding: 80px 20px; text-align: center; max-width: 1200px; margin: 0 auto; }
     .services h2 { color: #0f2b46; margin-bottom: 40px; font-size: 32px; }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .service-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #f39c12; }
     .service-card h3 { margin-bottom: 15px; color: #0f2b46; }
-    .service-card p { font-size: 14px; color: #666; line-height: 1.6; }
-
     footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; }
-    footer a { color: #f39c12; text-decoration: none; }
-    
-    @media (max-width: 768px) {
-      header { flex-direction: column; gap: 15px; padding: 20px; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
-    }
+    @media (max-width: 768px) { header { flex-direction: column; gap: 15px; padding: 20px; } nav ul { flex-wrap: wrap; justify-content: center; } }
   </style>
 </head>
 <body>
-
   <header>
     <h1>JT CNF</h1>
     <nav>
@@ -56,40 +42,21 @@
       </ul>
     </nav>
   </header>
-
   <section class="hero">
     <h2>Your Trusted Partner in Customs Clearance & Freight Forwarding</h2>
     <p>Professional customs clearance and freight coordination support for importers and exporters, with primary operational experience at Dhaka Airport and Chattogram Port.</p>
     <a href="quote.html" class="btn btn-primary">Request a Quote</a>
-    <a href="quote.html" class="btn btn-secondary">Pre-Assessment</a>
+    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
   </section>
-
   <section class="services">
     <h2>Our Services</h2>
     <div class="service-grid">
-      <div class="service-card">
-        <h3>Import Customs Clearance</h3>
-        <p>End-to-end customs clearance support for your import shipments.</p>
-      </div>
-      <div class="service-card">
-        <h3>Export Customs Clearance</h3>
-        <p>Efficient clearance processing for export cargo at major ports.</p>
-      </div>
-      <div class="service-card">
-        <h3>Air Cargo Clearance</h3>
-        <p>Fast and reliable clearance services at Dhaka Airport.</p>
-      </div>
-      <div class="service-card">
-        <h3>Sea Cargo Clearance</h3>
-        <p>Comprehensive clearance solutions for sea shipments at Chattogram Port.</p>
-      </div>
+      <div class="service-card"><h3>Import Customs Clearance</h3><p>End-to-end customs clearance support for your import shipments.</p></div>
+      <div class="service-card"><h3>Export Customs Clearance</h3><p>Efficient clearance processing for export cargo at major ports.</p></div>
+      <div class="service-card"><h3>Air Cargo Clearance</h3><p>Fast and reliable clearance services at Dhaka Airport.</p></div>
+      <div class="service-card"><h3>Sea Cargo Clearance</h3><p>Comprehensive clearance solutions for sea shipments at Chattogram Port.</p></div>
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
-    <p>Hotline: +880 1811470616</p>
-  </footer>
-
+  <footer><p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p><p>Hotline: +880 1811470616</p></footer>
 </body>
 </html>
