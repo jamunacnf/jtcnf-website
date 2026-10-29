@@ -4,20 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M/S. JAMUNA TRADERS — Customs Clearing & Forwarding</title>
+  
   <link rel="icon" type="image/png" href="logo.png">
-  <!-- Google Fonts (Poppins for body, Playfair Display for Serif headers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background-color: #ffffff; color: #333; line-height: 1.6; overflow-x: hidden; }
     
-    /* ================= TOP BAR WITH ANIMATIONS ================= */
+    /* ================= TOP BAR ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
     .social-icons { display: flex; gap: 12px; align-items: center; }
     .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
@@ -39,14 +37,16 @@
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
     
     .logo-container { display: flex; align-items: center; gap: 15px; }
-    /* লোগো গোল না করে স্কয়ার রাখা হয়েছে যাতে পুরোটা দেখা যায় */
     .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
     
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
-    /* Times New Roman ধাঁচের সেরিফ ফন্ট এবং বড় সাইজ */
     .company-name h1 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
     .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
+    /* Hamburger Button */
+    .menu-toggle { display: none; background: none; border: none; font-size: 28px; color: #0f2b46; cursor: pointer; }
+
+    /* Navigation */
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
     nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
@@ -61,13 +61,12 @@
     .btn-primary { display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 15px; background-color: #f39c12; color: white; transition: 0.3s; }
     .btn-primary:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
 
-    /* ================= GENERAL SECTIONS ================= */
+    /* ================= SECTIONS ================= */
     .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
     .section-title { text-align: center; margin-bottom: 50px; }
     .section-title h2 { font-size: 32px; color: #0f2b46; font-weight: 600; margin-bottom: 10px; }
     .section-title p { color: #666; font-size: 15px; max-width: 700px; margin: 0 auto; font-weight: 400; }
 
-    /* ================= EXPERTISE SECTION ================= */
     .expertise-row { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
     .expertise-row.reverse { flex-direction: row-reverse; }
     .expertise-img { flex: 1; width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; max-height: 400px;}
@@ -75,7 +74,6 @@
     .expertise-text h3 { font-size: 28px; color: #0f2b46; margin-bottom: 15px; font-weight: 600; line-height: 1.3; }
     .expertise-text p { color: #555; margin-bottom: 15px; font-size: 15px; font-weight: 400; }
 
-    /* ================= DIVERSE GOODS ================= */
     .goods-bg { background-color: #f9f9f9; padding: 80px 20px; }
     .goods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
     .goods-item { background: white; padding: 25px 15px; border-radius: 5px; text-align: center; border: 1px solid #eee; transition: all 0.3s ease; }
@@ -83,7 +81,6 @@
     .goods-item i { font-size: 30px; color: #f39c12; margin-bottom: 15px; display: block; }
     .goods-item span { font-weight: 500; font-size: 14px; color: #333; }
 
-    /* ================= SERVICES SECTION ================= */
     .services-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: flex-start; }
     .services-text h2 { font-size: 32px; color: #0f2b46; margin-bottom: 20px; font-weight: 600; }
     .services-text p { color: #555; font-size: 15px; line-height: 1.8; }
@@ -97,7 +94,6 @@
     .service-content a { display: inline-block; margin-top: 10px; color: #f39c12; font-size: 13px; font-weight: 500; text-decoration: none; text-transform: uppercase; }
     .service-content a:hover { color: #e67e22; }
 
-    /* ================= CLIENTS MARQUEE ================= */
     .clients-section { background: #f4f7f6; padding: 40px 0; overflow: hidden; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
     .clients-section h2 { text-align: center; color: #0f2b46; margin-bottom: 30px; font-size: 24px; font-weight: 600; }
     .marquee { display: flex; overflow: hidden; user-select: none; gap: 50px; }
@@ -106,24 +102,19 @@
     .client-logo:hover { opacity: 1; color: #f39c12; }
     @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 50px)); } }
 
-    /* ================= PORTS SECTION ================= */
     .ports-section { padding: 80px 20px; background-color: #ffffff; }
     .ports-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 50px; }
-    
     .ports-left { flex: 1.3; }
     .ports-left h2 { font-size: 28px; color: #111; font-weight: 600; margin-bottom: 15px; }
     .ports-left p { color: #666; font-size: 15px; margin-bottom: 40px; line-height: 1.8; }
-    
     .ports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .port-item { border: 1px solid #ddd; padding: 20px 25px; display: flex; align-items: center; gap: 20px; background: #fff; transition: 0.3s; }
     .port-item:hover { border-color: #e67e22; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transform: translateY(-3px); }
     .port-item i { font-size: 28px; color: #e67e22; }
     .port-item span { font-size: 16px; color: #222; font-weight: 500; }
-    
     .ports-right { flex: 0.7; display: flex; justify-content: center; }
-    .ports-right img { width: 100%; max-width: 350px; object-fit: contain; }
+    .ports-right img { width: 100%; max-width: 500px; object-fit: contain; }
 
-    /* ================= BLOG SECTION ================= */
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
     .blog-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; }
     .blog-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
@@ -135,12 +126,9 @@
     /* ================= FOOTER ================= */
     footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
-    
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
     .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
-    /* ফুটারেও Times New Roman ফন্ট */
-    .footer-logo h3 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
-    
+    .footer-logo h3 { font-family: 'Playfair Display', serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
     .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
     .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
     .footer-box p i { color: #f39c12; margin-top: 4px; }
@@ -151,16 +139,47 @@
     .social-links a:hover { background: #f39c12; color: white; transform: translateY(-3px); }
     .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
     .download-btn:hover { background-color: #e67e22; }
-    .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
+    .map-container-footer iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
     
     .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+    .footer-bottom a { color: #aaa; text-decoration: none; transition: 0.3s; }
+    .footer-bottom a:hover { color: #f39c12; }
 
-    /* ================= RESPONSIVE ================= */
+    /* ================= RESPONSIVE (Mobile Friendly) ================= */
     @media (max-width: 1024px) {
-      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
-      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
-      .logo-container { flex-direction: column; text-align: center; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
+      /* Top Bar - Keep it thin */
+      .top-bar { padding: 5px 10px; flex-direction: row; gap: 10px; }
+      .social-icons { display: none; } /* Hide social icons on mobile */
+      .top-btn { padding: 5px 12px; font-size: 11px; }
+      
+      /* Header - Keep it in one line */
+      header { padding: 10px 15px; flex-direction: row; flex-wrap: nowrap; }
+      .logo-icon { height: 40px; width: 40px; }
+      .company-name h1 { font-size: 16px; }
+      .company-name span { font-size: 7px; }
+      
+      /* Show Hamburger Menu */
+      .menu-toggle { display: block; }
+
+      /* Mobile Dropdown Menu */
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        z-index: 999;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav li { width: 100%; text-align: center; border-bottom: 1px solid #eee; }
+      nav a { display: block; padding: 15px; font-size: 15px; }
+      .nav-btn { margin: 10px auto; width: 80%; border-radius: 5px; }
+
+      /* Other Sections */
       .hero { height: auto; padding: 80px 20px; text-align: center; background-attachment: scroll; }
       .hero h2 { font-size: 32px; }
       .expertise-row, .expertise-row.reverse { flex-direction: column; gap: 30px; text-align: center; }
@@ -170,6 +189,7 @@
       .ports-right { margin-top: 40px; }
       .footer-container { grid-template-columns: 1fr 1fr; }
     }
+    
     @media (max-width: 768px) {
       .service-cards-grid { grid-template-columns: 1fr; }
       .ports-grid { grid-template-columns: 1fr; }
@@ -192,7 +212,6 @@
       <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
       <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
     </div>
-    
     <div class="top-actions">
       <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
       <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
@@ -202,14 +221,20 @@
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <!-- লোগোর নাম logo.png দেওয়া হয়েছে -->
       <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
       <div class="company-name">
         <h1>M/S. JAMUNA TRADERS</h1>
         <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
       </div>
     </div>
-    <nav>
+    
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -312,7 +337,7 @@
     </div>
   </section>
 
-  <!-- OUR CLIENTS (MARQUEE) -->
+  <!-- OUR CLIENTS -->
   <section class="clients-section">
     <h2>Our Clients</h2>
     <div class="marquee">
@@ -331,13 +356,12 @@
     </div>
   </section>
 
-  <!-- PORTS SECTION (Exact SS Match) -->
+  <!-- PORTS SECTION -->
   <section class="ports-section">
     <div class="ports-container">
       <div class="ports-left">
         <h2>Serving Major Ports Across Bangladesh</h2>
         <p>We are your one-stop shop for efficient customs clearance at all of the major ports. Our carrying and forwarding services ensure effective import and export management, utilizing advanced freight transport methods.</p>
-        
         <div class="ports-grid">
           <div class="port-item"><i class="fa-solid fa-plane"></i> <span>Dhaka Customs (AFU)</span></div>
           <div class="port-item"><i class="fa-solid fa-train"></i> <span>ICD Kamalapur Customs</span></div>
@@ -346,7 +370,6 @@
           <div class="port-item"><i class="fa-solid fa-anchor"></i> <span>Pangaon Customs</span></div>
         </div>
       </div>
-
       <div class="ports-right">
         <img src="Customs.png" alt="Bangladesh Customs">
       </div>
@@ -391,7 +414,6 @@
     <div class="footer-container">
       <div class="footer-box">
         <div class="footer-logo">
-          <!-- ফুটারেও logo.png -->
           <img src="logo.png" alt="Logo">
           <h3>M/S. JAMUNA TRADERS</h3>
         </div>
@@ -400,45 +422,52 @@
         <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
         <p style="margin-top: 15px; font-weight: 500; color: #0f2b46;">Social Links</p>
         <div class="social-links">
-          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" title="Google Map"><i class="fa-solid fa-map-location-dot"></i></a>
-          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
       </div>
-
       <div class="footer-box">
         <h4>Head Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
       </div>
-
       <div class="footer-box">
         <h4>Chattogram Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
         <h4 style="margin-top: 25px;">Benapole Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Nurjahan Mansion, C&F Agent Building Road, Benapole, Jessore.</p>
       </div>
-
       <div class="footer-box">
         <h4>Location Map</h4>
-        <div class="map-container">
+        <div class="map-container-footer">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
     
-    <!-- Navy Blue Bottom Bar -->
-        <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
+    <!-- Footer Bottom with Privacy & Terms -->
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
       <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
       <div style="display: flex; gap: 15px;">
-        <a href="privacy.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Privacy Policy</a>
-        <a href="terms.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
       </div>
     </div>
   </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
