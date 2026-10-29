@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inland Road Transport in Bangladesh — M/S. JAMUNA TRADERS</title>
+  
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* (আগের পেজগুলোর মতোই বেসিক সিএসএস) */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f9f9f9; color: #333; line-height: 1.8; overflow-x: hidden; }
+    
+    .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .social-icons { display: flex; gap: 12px; align-items: center; }
+    .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
+    .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
+    .top-actions { display: flex; gap: 15px; }
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
+    .btn-email { background-color: #f39c12; }
+    .btn-wa { background-color: #25D366; }
+    .top-btn:hover { animation: none; transform: scale(1.05); }
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); } }
+
+    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    .logo-container { display: flex; align-items: center; gap: 15px; }
+    .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
+    .company-name h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
+    .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+    nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
+    nav a:hover, nav a.active { color: #f39c12; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; transition: 0.3s; }
+    
+    /* Article Styles */
+    .article-header { background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 100px 20px 60px; }
+    .article-header h1 { font-size: 40px; font-weight: 700; max-width: 900px; margin: 0 auto 20px; line-height: 1.3; }
+    .article-meta { font-size: 14px; color: #ddd; display: flex; justify-content: center; gap: 20px; }
+    .article-meta i { color: #f39c12; margin-right: 5px; }
+    
+    .article-container { max-width: 900px; margin: -40px auto 80px; background: #fff; padding: 50px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; z-index: 10; }
+    .article-feature-img { width: 100%; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    
+    /* Typography for Article Body */
+    .article-body h2 { font-size: 26px; color: #0f2b46; margin: 30px 0 15px; font-weight: 600; }
+    .article-body h3 { font-size: 20px; color: #0f2b46; margin: 25px 0 10px; font-weight: 600; }
+    .article-body p { font-size: 16px; color: #444; margin-bottom: 20px; text-align: justify; }
+    .article-body ul { margin: 0 0 20px 20px; color: #444; font-size: 16px; }
+    .article-body ul li { margin-bottom: 10px; }
+    .article-body blockquote { border-left: 4px solid #f39c12; padding: 15px 20px; background: #fdfaf5; margin: 20px 0; font-style: italic; color: #555; border-radius: 0 8px 8px 0; }
+    
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; background-color: #0f2b46; color: white; text-decoration: none; padding: 12px 25px; border-radius: 5px; font-weight: 500; margin-top: 30px; transition: 0.3s; }
+    .back-btn:hover { background-color: #f39c12; }
+
+    /* Footer (Same as other pages) */
+    footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
+    .footer-logo h3 { font-family: 'Playfair Display', serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
+    .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
+    .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
+    .footer-box p i { color: #f39c12; margin-top: 4px; }
+    .footer-box a { color: #555; text-decoration: none; transition: 0.3s; }
+    .footer-box a:hover { color: #f39c12; }
+    .social-links { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+    .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
+    .social-links a:hover { background: #f39c12; color: white; transform: translateY(-3px); }
+    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
+    .map-container-footer iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
+    .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+
+    @media (max-width: 1024px) {
+      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
+      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
+      .logo-container { flex-direction: column; text-align: center; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .footer-container { grid-template-columns: 1fr 1fr; }
+      .article-container { padding: 30px 20px; }
+      .article-header h1 { font-size: 30px; }
+    }
+    @media (max-width: 768px) {
+      .footer-container { grid-template-columns: 1fr; text-align: center; }
+      .footer-box p { justify-content: center; }
+      .footer-logo { justify-content: center; }
+      .social-links { justify-content: center; }
+      .article-meta { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR & HEADER (Same as other pages) -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="top-actions">
+      <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo-icon">
+      <div class="company-name">
+        <h1>M/S. JAMUNA TRADERS</h1>
+        <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ARTICLE HEADER -->
+  <section class="article-header">
+    <h1>Inland Road Transport in Bangladesh: A Complete Guide</h1>
+    <div class="article-meta">
+      <span><i class="fa-regular fa-calendar"></i> October 25, 2024</span>
+      <span><i class="fa-regular fa-user"></i> By Admin</span>
+      <span><i class="fa-regular fa-folder"></i> Logistics</span>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTENT -->
+  <article class="article-container">
+    
+    <!-- Featured Image -->
+    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80" alt="Truck on Road" class="article-feature-img">
+
+    <div class="article-body">
+      <p>Inland road transport is the backbone of Bangladesh's supply chain. Every day, thousands of containers and cargo trucks move between major seaports, land ports, and inland container depots (ICDs) to ensure that goods reach factories and consumers on time. However, navigating this complex network can be challenging for new importers and exporters.</p>
+
+      <h2>Why Road Transport is Crucial</h2>
+      <p>While sea and air transport bring goods into the country, road transport is what actually delivers them to their final destination. With a vast network of highways, Bangladesh relies heavily on trucks for last-mile delivery. Whether you are importing raw materials for a garment factory in Dhaka or exporting pharmaceuticals from Chattogram, road transport bridges the gap.</p>
+
+      <blockquote>
+        "Efficiency in inland road transport can reduce overall logistics costs by up to 20%, making it a critical factor for business profitability."
+      </blockquote>
+
+      <h2>Key Challenges in Inland Transport</h2>
+      <p>Despite its importance, inland road transport comes with its own set of challenges:</p>
+      <ul>
+        <li><strong>Traffic Congestion:</strong> Major highways and city entry points often face severe traffic jams, causing delays.</li>
+        <li><strong>Vehicle Capacity:</strong> Finding the right type of truck (open body, covered van, or flatbed) for your specific cargo can sometimes be difficult.</li>
+        <li><strong>Documentation:</strong> Proper transit documents and waybills are strictly checked at checkposts.</li>
+      </ul>
+
+      <h3>How M/S. Jamuna Traders Helps</h3>
+      <p>At M/S. Jamuna Traders, we take the stress out of inland transport. We coordinate directly with trusted transport providers to ensure your cargo is loaded safely and reaches its destination without unnecessary delays. We also assist in preparing the necessary transit documentation, ensuring a smooth journey from the port to your warehouse.</p>
+
+      <h2>Conclusion</h2>
+      <p>Choosing the right logistics partner is essential for successful inland transport. By understanding the regulations and planning ahead, businesses can avoid costly delays and ensure their supply chain remains unbroken.</p>
+    </div>
+
+    <!-- Back to Blog Button -->
+    <a href="blog.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to All Articles</a>
+
+  </article>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-box">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Logo">
+          <h3>M/S. JAMUNA TRADERS</h3>
+        </div>
+        <p style="margin-bottom: 5px; font-weight: 500; color: #0f2b46;">Contact Us</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
+      </div>
+      <div class="footer-box">
+        <h4>Head Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Chattogram Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Location Map</h4>
+        <div class="map-container-footer">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
