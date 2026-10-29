@@ -3,47 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms & Conditions — JT CNF</title>
+  <title>Terms & Conditions — M/S. JAMUNA TRADERS</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background-color: #f4f7f6; color: #333; line-height: 1.8; }
-    header { background-color: #0f2b46; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; }
-    nav ul { list-style: none; display: flex; gap: 20px; }
-    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
-    .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
-    .content { max-width: 900px; margin: 50px auto; padding: 0 20px; background: white; padding: 40px; border-radius: 8px; }
-    h2 { color: #0f2b46; margin-bottom: 20px; }
-    h3 { color: #0f2b46; margin-top: 30px; margin-bottom: 10px; }
-    footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
-    @media (max-width: 768px) { header { flex-direction: column; gap: 15px; padding: 20px; } nav ul { flex-wrap: wrap; justify-content: center; } }
+    /* সেম স্টাইল যা প্রাইভেসি পেজে ব্যবহার করা হয়েছে */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f9f9f9; color: #333; line-height: 1.8; overflow-x: hidden; }
+    .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .social-icons { display: flex; gap: 12px; align-items: center; }
+    .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
+    .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
+    .top-actions { display: flex; gap: 15px; }
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; transition: 0.3s; }
+    .btn-email { background-color: #f39c12; }
+    .btn-wa { background-color: #25D366; }
+    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    .logo-container { display: flex; align-items: center; gap: 15px; }
+    .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
+    .company-name h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
+    .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+    nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
+    nav a:hover { color: #f39c12; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; }
+    .page-title { background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 80px 20px; }
+    .page-title h2 { font-size: 42px; font-weight: 700; margin-bottom: 15px; }
+    .content-container { max-width: 900px; margin: -40px auto 80px; background: #fff; padding: 50px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; z-index: 10; }
+    .content-container h3 { font-size: 22px; color: #0f2b46; margin: 30px 0 15px; font-weight: 600; }
+    .content-container p { font-size: 15px; color: #555; margin-bottom: 15px; text-align: justify; }
+    footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; margin-top: 50px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
+    .footer-logo h3 { font-family: 'Playfair Display', serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
+    .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
+    .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
+    .footer-box p i { color: #f39c12; margin-top: 4px; }
+    .footer-box a { color: #555; text-decoration: none; transition: 0.3s; }
+    .footer-box a:hover { color: #f39c12; }
+    .social-links { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+    .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
+    .social-links a:hover { background: #f39c12; color: white; }
+    .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+    @media (max-width: 1024px) {
+      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
+      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
+      .logo-container { flex-direction: column; text-align: center; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .footer-container { grid-template-columns: 1fr 1fr; }
+      .content-container { padding: 30px 20px; }
+    }
+    @media (max-width: 768px) {
+      .footer-container { grid-template-columns: 1fr; text-align: center; }
+      .footer-box p { justify-content: center; }
+      .footer-logo { justify-content: center; }
+      .social-links { justify-content: center; }
+    }
   </style>
 </head>
 <body>
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="top-actions">
+      <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
   <header>
-    <h1>JT CNF</h1>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo-icon">
+      <div class="company-name">
+        <h1>M/S. JAMUNA TRADERS</h1>
+        <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
+      </div>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
   </header>
-  <div class="content">
+
+  <section class="page-title">
     <h2>Terms & Conditions</h2>
-    <p>Last updated: 2024</p>
+  </section>
+
+  <div class="content-container">
+    <p>Last updated: October 2024</p>
+    
     <h3>1. Services</h3>
-    <p>JT CNF provides customs clearing and forwarding services. All services are subject to applicable laws and regulations of Bangladesh.</p>
-    <h3>2. Quotations</h3>
-    <p>Quotations provided through this website are preliminary estimates and do not constitute a binding contract. Final charges depend on actual shipment details and customs assessment.</p>
+    <p>M/S. Jamuna Traders (JT CNF) provides customs clearing and forwarding services. All services are subject to the applicable laws, rules, and regulations of the Government of Bangladesh and relevant port authorities.</p>
+    
+    <h3>2. Quotations & Estimates</h3>
+    <p>Quotations provided through this website are preliminary estimates based on the information provided by the client. They do not constitute a binding contract. Final charges will depend on the actual shipment details, customs assessment, and prevailing government tariffs.</p>
+
     <h3>3. Limitation of Liability</h3>
-    <p>We are not liable for delays or losses caused by customs authorities, carriers, or events beyond our reasonable control.</p>
-    <h3>4. Contact</h3>
-    <p>For questions, contact us at jtcnf.bd@gmail.com or +880 1811470616.</p>
+    <p>While we strive for the highest level of efficiency, we are not liable for delays, losses, or damages caused by customs authorities, port congestion, carriers, natural disasters, or any events beyond our reasonable control.</p>
+
+    <h3>4. Client Responsibilities</h3>
+    <p>The client is responsible for providing accurate and complete documentation (e.g., HS Codes, Commercial Invoices, Packing Lists). Any penalties or delays arising from incorrect information provided by the client will be the sole responsibility of the client.</p>
+
+    <h3>5. Contact Information</h3>
+    <p>For any questions regarding these terms, please contact us at <strong>jtcnf.bd@gmail.com</strong> or call <strong>+880 1811470616</strong>.</p>
   </div>
-  <footer><p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p></footer>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-box">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Logo">
+          <h3>M/S. JAMUNA TRADERS</h3>
+        </div>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-box">
+        <h4>Head Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Chattogram Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Location Map</h4>
+        <div class="map-container-footer">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" style="width:100%; height:150px; border:none; border-radius:8px;"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
