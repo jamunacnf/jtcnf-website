@@ -3,17 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found — JT CNF</title>
+  <title>Page Not Found — M/S. JAMUNA TRADERS</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 100px 20px; background: #f4f7f6; }
-    h1 { font-size: 80px; color: #0f2b46; }
-    p { font-size: 20px; color: #666; margin-bottom: 30px; }
-    a { background: #f39c12; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { 
+      background: linear-gradient(rgba(10, 28, 46, 0.95), rgba(10, 28, 46, 0.95)), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover;
+      height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      text-align: center; 
+      color: white;
+    }
+    .error-container { max-width: 600px; padding: 20px; }
+    .error-code { font-size: 120px; font-weight: 700; color: #f39c12; line-height: 1; margin-bottom: 20px; }
+    .error-title { font-size: 32px; margin-bottom: 15px; font-weight: 600; }
+    .error-text { font-size: 16px; color: #ccc; margin-bottom: 40px; }
+    .home-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 10px; 
+      background-color: #f39c12; 
+      color: white; 
+      text-decoration: none; 
+      padding: 14px 30px; 
+      border-radius: 5px; 
+      font-weight: 600; 
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .home-btn:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243,156,18,0.4); }
   </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>Page not found.</p>
-  <a href="/">Go Home</a>
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <div class="error-title">Oops! Page Not Found</div>
+    <p class="error-text">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <a href="index.html" class="home-btn"><i class="fa-solid fa-house"></i> Back to Home</a>
+  </div>
 </body>
 </html>
