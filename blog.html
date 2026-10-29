@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog & News — M/S. JAMUNA TRADERS</title>
+  
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background-color: #f9f9f9; color: #333; line-height: 1.6; overflow-x: hidden; }
     
+    /* ================= TOP BAR & HEADER ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
     .social-icons { display: flex; gap: 12px; align-items: center; }
     .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
@@ -24,21 +26,21 @@
     .btn-wa { background-color: #25D366; }
     .top-btn:hover { animation: none; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); } }
-
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
     .logo-container { display: flex; align-items: center; gap: 15px; }
     .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
+    .company-name { display: flex; flex-direction: column; line-height: 1.1; }
     .company-name h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
     .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .menu-toggle { display: none; background: none; border: none; font-size: 28px; color: #0f2b46; cursor: pointer; }
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
     nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; transition: 0.3s; }
-    .nav-btn:hover { background-color: #e67e22; transform: translateY(-2px); }
 
+    /* ================= PAGE TITLE & BLOG ================= */
     .page-title { background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 100px 20px; }
     .page-title h2 { font-size: 42px; font-weight: 700; margin-bottom: 15px; }
-    .page-title p { font-size: 16px; color: #eee; max-width: 600px; margin: 0 auto; }
 
     .blog-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
@@ -48,25 +50,23 @@
     .blog-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
     .blog-card:hover .blog-image img { transform: scale(1.1); }
     .blog-category { position: absolute; top: 15px; left: 15px; background: #f39c12; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
-    
     .blog-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
     .blog-meta { font-size: 13px; color: #888; margin-bottom: 10px; display: flex; gap: 15px; }
     .blog-meta i { color: #f39c12; margin-right: 5px; }
     .blog-content h3 { font-size: 22px; color: #0f2b46; margin-bottom: 15px; font-weight: 600; line-height: 1.4; transition: 0.3s; }
     .blog-card:hover .blog-content h3 { color: #f39c12; }
     .blog-content p { color: #666; font-size: 15px; margin-bottom: 20px; flex-grow: 1; }
-    
     .read-more-btn { display: inline-flex; align-items: center; gap: 8px; color: #f39c12; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.3s; }
-    .read-more-btn i { transition: 0.3s; }
     .read-more-btn:hover { color: #e67e22; }
+    .read-more-btn i { transition: 0.3s; }
     .read-more-btn:hover i { transform: translateX(5px); }
 
     .cta-section { background-color: #0f2b46; color: white; text-align: center; padding: 60px 20px; }
     .cta-section h2 { font-size: 32px; margin-bottom: 15px; font-weight: 600; }
-    .cta-section p { font-size: 16px; margin-bottom: 30px; color: #ccc; }
-    .cta-btn { display: inline-block; background-color: #f39c12; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-weight: 600; font-size: 16px; transition: 0.3s; }
+    .cta-btn { display: inline-block; background-color: #f39c12; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-weight: 600; font-size: 16px; transition: 0.3s; margin-top: 20px; }
     .cta-btn:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
 
+    /* ================= FOOTER ================= */
     footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
@@ -83,16 +83,29 @@
     .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
     .map-container-footer iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
     .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+    .footer-bottom a { color: #aaa; text-decoration: none; transition: 0.3s; }
+    .footer-bottom a:hover { color: #f39c12; }
 
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 1024px) {
-      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
-      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
-      .logo-container { flex-direction: column; text-align: center; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
+      .top-bar { padding: 5px 10px; flex-direction: row; gap: 10px; }
+      .social-icons { display: none; }
+      .top-btn { padding: 5px 12px; font-size: 11px; }
+      header { padding: 10px 15px; flex-direction: row; flex-wrap: nowrap; }
+      .logo-icon { height: 40px; width: 40px; }
+      .company-name h1 { font-size: 16px; }
+      .company-name span { font-size: 7px; }
+      .menu-toggle { display: block; }
+      nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: #ffffff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 10px 0; z-index: 999; }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav li { width: 100%; text-align: center; border-bottom: 1px solid #eee; }
+      nav a { display: block; padding: 15px; font-size: 15px; }
+      .nav-btn { margin: 10px auto; width: 80%; border-radius: 5px; }
+      .blog-grid { grid-template-columns: 1fr; }
       .footer-container { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
-      .blog-grid { grid-template-columns: 1fr; }
       .footer-container { grid-template-columns: 1fr; text-align: center; }
       .footer-box p { justify-content: center; }
       .footer-logo { justify-content: center; }
@@ -125,7 +138,8 @@
         <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
       </div>
     </div>
-    <nav>
+    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <nav id="navMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -145,7 +159,6 @@
 
   <section class="blog-container">
     <div class="blog-grid">
-      
       <!-- Card 1 -->
       <div class="blog-card">
         <div class="blog-image">
@@ -153,16 +166,12 @@
           <span class="blog-category">Logistics</span>
         </div>
         <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> Oct 25, 2024</span>
-            <span><i class="fa-regular fa-user"></i> Admin</span>
-          </div>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Oct 25, 2024</span><span><i class="fa-regular fa-user"></i> Admin</span></div>
           <h3>Inland Road Transport in Bangladesh: A Complete Guide</h3>
           <p>Discover how to ensure reliable freight movement across the country. Learn about the best practices for inland transport.</p>
           <a href="blog-post-1.html" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-
       <!-- Card 2 -->
       <div class="blog-card">
         <div class="blog-image">
@@ -170,16 +179,12 @@
           <span class="blog-category">Customs</span>
         </div>
         <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> Oct 20, 2024</span>
-            <span><i class="fa-regular fa-user"></i> Admin</span>
-          </div>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Oct 20, 2024</span><span><i class="fa-regular fa-user"></i> Admin</span></div>
           <h3>Customs Clearance Explained: What It Is and Why It Matters</h3>
           <p>Understand why customs clearance is a crucial step for importers in Bangladesh.</p>
           <a href="blog-post-2.html" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-
       <!-- Card 3 -->
       <div class="blog-card">
         <div class="blog-image">
@@ -187,16 +192,12 @@
           <span class="blog-category">Business</span>
         </div>
         <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> Oct 15, 2024</span>
-            <span><i class="fa-regular fa-user"></i> Admin</span>
-          </div>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Oct 15, 2024</span><span><i class="fa-regular fa-user"></i> Admin</span></div>
           <h3>How to Import Goods Without a Local Presence</h3>
           <p>Learn the role of an Importer of Record (IOR) in global trade.</p>
           <a href="blog-post-3.html" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-
       <!-- Card 4 -->
       <div class="blog-card">
         <div class="blog-image">
@@ -204,16 +205,12 @@
           <span class="blog-category">Guide</span>
         </div>
         <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> Oct 10, 2024</span>
-            <span><i class="fa-regular fa-user"></i> Admin</span>
-          </div>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Oct 10, 2024</span><span><i class="fa-regular fa-user"></i> Admin</span></div>
           <h3>Air Freight vs. Sea Freight: Which One is Right for You?</h3>
           <p>A comprehensive comparison between air and sea cargo methods.</p>
           <a href="blog-post-4.html" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-
       <!-- Card 5 -->
       <div class="blog-card">
         <div class="blog-image">
@@ -221,16 +218,12 @@
           <span class="blog-category">Customs</span>
         </div>
         <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> Oct 05, 2024</span>
-            <span><i class="fa-regular fa-user"></i> Admin</span>
-          </div>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Oct 05, 2024</span><span><i class="fa-regular fa-user"></i> Admin</span></div>
           <h3>Understanding HS Codes: A Beginner's Guide</h3>
           <p>HS Codes are essential for calculating import duties. Discover how to find the correct one.</p>
           <a href="blog-post-5.html" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-
       <!-- Card 6 -->
       <div class="blog-card">
         <div class="blog-image">
@@ -238,16 +231,12 @@
           <span class="blog-category">Tips</span>
         </div>
         <div class="blog-content">
-          <div class="blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> Sep 28, 2024</span>
-            <span><i class="fa-regular fa-user"></i> Admin</span>
-          </div>
+          <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Sep 28, 2024</span><span><i class="fa-regular fa-user"></i> Admin</span></div>
           <h3>Checklist: Preparing for Your Shipment Arrival</h3>
           <p>Don't get caught off guard! Use this checklist to prepare your documents.</p>
           <a href="blog-post-6.html" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -286,14 +275,21 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-        <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
-      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+    </div>
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
+      <p>&copy; <span id="currentYear"></span> M/S. Jamuna Traders. All Rights Reserved.</p>
       <div style="display: flex; gap: 15px;">
-        <a href="privacy.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Privacy Policy</a>
-        <a href="terms.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
       </div>
     </div>
   </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
