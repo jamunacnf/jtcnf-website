@@ -4,58 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JT CNF — Customs Clearing & Forwarding</title>
-  <style>  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        /* Premium Footer Styles */
-    footer { background-color: #0a1c2e; color: #ddd; padding: 50px 20px 20px; font-size: 14px; margin-top: 50px; }
-    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
-    .footer-box h4 { color: #f39c12; margin-bottom: 15px; font-size: 18px; border-bottom: 1px solid #1a3a5c; padding-bottom: 8px; }
-    .footer-box p { margin-bottom: 10px; line-height: 1.6; color: #bbb; }
-    .footer-box a { color: #ddd; text-decoration: none; transition: 0.3s; }
-    .footer-box a:hover { color: #f39c12; }
     
-    .social-links { margin: 15px 0; }
-    .social-links a { font-weight: bold; }
-    
-    .download-btn { 
-      display: inline-block; 
-      background-color: #f39c12; 
-      color: white !important; 
-      padding: 8px 15px; 
-      border-radius: 4px; 
-      margin-top: 10px; 
-      font-weight: bold; 
-      text-decoration: none;
-    }
-    .download-btn:hover { background-color: #e67e22; }
+    /* Top Bar */
+    .top-bar { background-color: #fff; color: #333; padding: 8px 50px; display: flex; justify-content: space-between; font-size: 13px; border-bottom: 1px solid #eee; }
+    .top-bar a { color: #333; text-decoration: none; margin-left: 15px; font-weight: bold; }
+    .top-bar a i { color: #f39c12; margin-right: 5px; }
+    .top-bar .contact-info { display: flex; gap: 20px; }
 
-    .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
-    
-    /* Header Styles */
+    /* Header */
     header { background-color: #0f2b46; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    header h1 { font-size: 24px; white-space: nowrap; }
-    nav ul { list-style: none; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
+    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
-    .header-actions { display: flex; gap: 10px; align-items: center; }
-    .action-btn { color: white; text-decoration: none; font-size: 13px; padding: 6px 12px; border-radius: 4px; border: 1px solid #2a4a6b; background-color: #1a3a5c; transition: 0.3s; }
-    .action-btn:hover { background-color: #f39c12; border-color: #f39c12; }
-    .whatsapp { background-color: #25D366; border-color: #25D366; }
-    .whatsapp:hover { background-color: #1ebe5d; border-color: #1ebe5d; }
-    
-    /* Hero Section */
-    .hero { background: linear-gradient(rgba(15, 43, 70, 0.8), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 120px 20px; }
-    .hero h2 { font-size: 42px; margin-bottom: 20px; }
-    .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; }
-    .btn { padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin: 0 10px; }
-    .btn-primary { background-color: #f39c12; color: white; }
-    .btn-primary:hover { background-color: #e67e22; }
-    .btn-secondary { background-color: transparent; border: 2px solid white; color: white; }
-    .btn-secondary:hover { background-color: white; color: #0f2b46; }
+    .nav-btn:hover { background-color: #e67e22; }
 
-    /* Services Section */
+    /* Hero Section */
+    .hero { 
+      /* Using a clear, high-quality logistics image */
+      background: linear-gradient(rgba(15, 43, 70, 0.6), rgba(15, 43, 70, 0.6)), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; 
+      color: white; 
+      text-align: left; 
+      padding: 150px 10%; 
+    }
+    .hero-content { max-width: 800px; }
+    .hero h2 { font-size: 52px; margin-bottom: 20px; line-height: 1.2; font-weight: bold; }
+    .hero p { font-size: 18px; margin-bottom: 40px; max-width: 600px; }
+    
+    /* Hero Buttons (Animated & Clear) */
+    .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+    .btn-contact { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 10px; 
+      padding: 15px 30px; 
+      text-decoration: none; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .btn-call { background-color: #f39c12; color: white; }
+    .btn-call:hover { background-color: #e67e22; transform: translateY(-2px); }
+    .btn-email { background-color: transparent; border: 2px solid white; color: white; }
+    .btn-email:hover { background-color: white; color: #0f2b46; transform: translateY(-2px); }
+
+    /* Services */
     .services { padding: 80px 20px; text-align: center; max-width: 1200px; margin: 0 auto; }
     .services h2 { color: #0f2b46; margin-bottom: 40px; font-size: 32px; }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -63,20 +62,46 @@
     .service-card h3 { margin-bottom: 15px; color: #0f2b46; }
     
     /* Footer */
-    footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; }
+    footer { background-color: #0a1c2e; color: #ddd; padding: 50px 20px 20px; font-size: 14px; margin-top: 50px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-box h4 { color: #f39c12; margin-bottom: 15px; font-size: 18px; border-bottom: 1px solid #1a3a5c; padding-bottom: 8px; }
+    .footer-box p { margin-bottom: 10px; line-height: 1.6; color: #bbb; }
+    .footer-box a { color: #ddd; text-decoration: none; transition: 0.3s; }
+    .footer-box a:hover { color: #f39c12; }
+    .social-links { margin: 15px 0; }
+    .social-links a { font-weight: bold; }
+    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 4px; margin-top: 10px; font-weight: bold; text-decoration: none; }
+    .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
     
-    /* Mobile */
     @media (max-width: 1024px) {
+      .top-bar { flex-direction: column; text-align: center; gap: 10px; padding: 10px; }
+      .top-bar .contact-info { justify-content: center; }
       header { flex-direction: column; gap: 15px; padding: 15px; }
-      .header-actions { width: 100%; justify-content: center; margin-top: 10px; }
+      nav ul { justify-content: center; }
+      .hero { padding: 100px 20px; text-align: center; }
+      .hero h2 { font-size: 36px; }
+      .hero p { margin: 0 auto 30px; }
+      .hero-buttons { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <span><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></span>
+      <span><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></span>
+    </div>
+    <div class="social-links-top">
+      <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+
   <!-- Header -->
   <header>
-       <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
       <img src="logo.png" alt="JT CNF Logo" style="height: 45px; border-radius: 50%; background: white;">
       <div style="display: flex; flex-direction: column; line-height: 1.2;">
         <span style="font-size: 20px; font-weight: bold; letter-spacing: 1px;">JAMUNA TRADERS</span>
@@ -89,23 +114,29 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
-    <div class="header-actions">
-      <a href="mailto:jtcnf.bd@gmail.com" class="action-btn">✉️ Email</a>
-      <a href="https://wa.me/8801811470616" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
-      <a href="#" class="action-btn">📄 Company Profile</a> <!-- এখানে PDF লিংক দেবেন -->
-    </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>Your Trusted Partner in Customs Clearance & Freight Forwarding</h2>
-    <p>Professional customs clearance and freight coordination support for importers and exporters, with primary operational experience at Dhaka Airport and Chattogram Port.</p>
-    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
-    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+    <div class="hero-content">
+      <h2>Most Trusted Clearing & Forwarding Agent in Bangladesh</h2>
+      <p>JT CNF ensures fast, cost-effective, and secure customs clearance in all major ports. Professional freight coordination for your import and export needs.</p>
+      
+      <!-- Animated Contact Buttons -->
+      <div class="hero-buttons">
+        <a href="tel:+8801811470616" class="btn-contact btn-call">
+          <i class="fa-solid fa-phone"></i> +880 1811470616
+        </a>
+        <a href="mailto:jtcnf.bd@gmail.com" class="btn-contact btn-email">
+          <i class="fa-solid fa-envelope"></i> jtcnf.bd@gmail.com
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Services Section -->
@@ -119,80 +150,27 @@
     </div>
   </section>
 
-    <!-- Footer -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
-      
-      <!-- About / Contact Info -->
       <div class="footer-box">
         <h4>Contact Us</h4>
         <p><strong>Phone:</strong> <a href="tel:+8801811470616">+880 1811470616</a></p>
         <p><strong>Email:</strong> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
-        <div class="social-links">
-          <a href="#" target="_blank">Facebook</a> | 
-          <a href="#" target="_blank">LinkedIn</a>
-        </div>
+        <div class="social-links"><a href="#" target="_blank">Facebook</a> | <a href="#" target="_blank">LinkedIn</a></div>
         <a href="company-profile.pdf" download class="download-btn">📄 Download Profile</a>
       </div>
-
-      <!-- Head Office -->
       <div class="footer-box">
         <h4>Head Office</h4>
-        <p>M/S. Jamuna Trader's (JT CNF)<br>
-        [এখানে আপনার হেড অফিসের ঠিকানা লিখুন]<br>
-        Dhaka, Bangladesh.</p>
+        <p>M/S. Jamuna Trader's (JT CNF)<br>[এখানে আপনার হেড অফিসের ঠিকানা লিখুন]<br>Dhaka, Bangladesh.</p>
       </div>
-
-      <!-- Branch Offices -->
       <div class="footer-box">
         <h4>Service Offices</h4>
         <p><strong>Dhaka Airport:</strong><br> [এখানে এয়ারপোর্ট অফিসের ঠিকানা লিখুন]</p>
         <p><strong>Chattogram Port:</strong><br> [এখানে চট্টগ্রাম অফিসের ঠিকানা লিখুন]</p>
       </div>
-
     </div>
-
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
-    </div>
-   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      
-      <!-- About / Contact Info -->
-      <div class="footer-box">
-        <h4>Contact Us</h4>
-        <p><strong>Phone:</strong> <a href="tel:+8801811470616">+880 1811470616</a></p>
-        <p><strong>Email:</strong> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
-        <div class="social-links">
-          <a href="#" target="_blank">Facebook</a> | 
-          <a href="#" target="_blank">LinkedIn</a>
-        </div>
-        <a href="company-profile.pdf" download class="download-btn">📄 Download Profile</a>
-      </div>
-
-      <!-- Head Office -->
-      <div class="footer-box">
-        <h4>Head Office</h4>
-        <p>M/S. Jamuna Trader's (JT CNF)<br>
-        [এখানে আপনার হেড অফিসের ঠিকানা লিখুন]<br>
-        Dhaka, Bangladesh.</p>
-      </div>
-
-      <!-- Branch Offices -->
-      <div class="footer-box">
-        <h4>Service Offices</h4>
-        <p><strong>Dhaka Airport:</strong><br> [এখানে এয়ারপোর্ট অফিসের ঠিকানা লিখুন]</p>
-        <p><strong>Chattogram Port:</strong><br> [এখানে চট্টগ্রাম অফিসের ঠিকানা লিখুন]</p>
-      </div>
-
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p></div>
   </footer>
 
 </body>
