@@ -3,138 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services — JT CNF</title>
+  <title>Our Services — M/S. JAMUNA TRADERS</title>
+  
+  <!-- Browser Favicon (Tab Icon) -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Google Fonts (Poppins for body, Playfair Display for Serif headers) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #ffffff; color: #333; line-height: 1.6; overflow-x: hidden; }
     
-    header { background-color: #0f2b46; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    header h1 { font-size: 24px; white-space: nowrap; }
-    nav ul { list-style: none; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
+    /* ================= TOP BAR ================= */
+    .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .social-icons { display: flex; gap: 12px; align-items: center; }
+    .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
+    .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
+    .top-actions { display: flex; gap: 15px; }
+    
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
+    .btn-email { background-color: #f39c12; }
+    .btn-wa { background-color: #25D366; }
+    .top-btn:hover { animation: none; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
+    }
+
+    /* ================= HEADER ================= */
+    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    
+    .logo-container { display: flex; align-items: center; gap: 15px; }
+    .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
+    
+    .company-name { display: flex; flex-direction: column; line-height: 1.1; }
+    .company-name h1 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
+    .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+    nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+    nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
-    .nav-btn { background-color: #f39c12; color: white !important; padding: 8px 15px; border-radius: 5px; }
-    .header-actions { display: flex; gap: 10px; align-items: center; }
-    .action-btn { color: white; text-decoration: none; font-size: 13px; padding: 6px 12px; border-radius: 4px; border: 1px solid #2a4a6b; background-color: #1a3a5c; }
-    .whatsapp { background-color: #25D366; border-color: #25D366; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; transition: 0.3s; }
+    .nav-btn:hover { background-color: #e67e22; transform: translateY(-2px); }
 
+    /* ================= PAGE TITLE ================= */
     .page-title { background-color: #0a1c2e; color: white; text-align: center; padding: 60px 20px; }
-    .services-section { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .service-card { background: white; padding: 30px; border-radius: 8px; border-top: 4px solid #f39c12; }
-    .service-card h3 { color: #0f2b46; margin-bottom: 15px; }
-    .service-card ul { margin-left: 20px; color: #666; }
-    footer { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
-    
-    @media (max-width: 1024px) {
-      header { flex-direction: column; gap: 15px; padding: 15px; }
-      .header-actions { width: 100%; justify-content: center; margin-top: 10px; }
-    }
-        /* Premium Footer Styles */
-    footer { background-color: #0a1c2e; color: #ddd; padding: 50px 20px 20px; font-size: 14px; margin-top: 50px; }
-    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
-    .footer-box h4 { color: #f39c12; margin-bottom: 15px; font-size: 18px; border-bottom: 1px solid #1a3a5c; padding-bottom: 8px; }
-    .footer-box p { margin-bottom: 10px; line-height: 1.6; color: #bbb; }
-    .footer-box a { color: #ddd; text-decoration: none; transition: 0.3s; }
-    .footer-box a:hover { color: #f39c12; }
-    
-    .social-links { margin: 15px 0; }
-    .social-links a { font-weight: bold; }
-    
-    .download-btn { 
-      display: inline-block; 
-      background-color: #f39c12; 
-      color: white !important; 
-      padding: 8px 15px; 
-      border-radius: 4px; 
-      margin-top: 10px; 
-      font-weight: bold; 
-      text-decoration: none;
-    }
-    .download-btn:hover { background-color: #e67e22; }
+    .page-title h2 { font-size: 38px; font-weight: 600; margin-bottom: 10px; }
+    .page-title p { font-size: 16px; color: #ccc; }
 
-    .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
+    /* ================= SERVICES SECTION ================= */
+    .services-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+    
+    .service-card { background: #ffffff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
+    .service-card:hover { border-color: #f39c12; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
+    
+    .service-card img { width: 100%; height: 220px; object-fit: cover; }
+    
+    .service-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+    .service-content h3 { font-size: 22px; color: #0f2b46; margin-bottom: 15px; font-weight: 600; border-left: 4px solid #f39c12; padding-left: 10px; }
+    .service-content p { color: #555; font-size: 15px; margin-bottom: 20px; flex-grow: 1; }
+    .service-content ul { margin-bottom: 20px; padding-left: 20px; color: #666; font-size: 14px; }
+    .service-content ul li { margin-bottom: 8px; }
+    
+    .service-btn { display: inline-block; background-color: #f39c12; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: 500; text-align: center; transition: 0.3s; }
+    .service-btn:hover { background-color: #e67e22; }
+
+    /* ================= CTA SECTION ================= */
+    .cta-section { background-color: #0f2b46; color: white; text-align: center; padding: 60px 20px; margin-top: 50px; }
+    .cta-section h2 { font-size: 32px; margin-bottom: 15px; font-weight: 600; }
+    .cta-section p { font-size: 16px; margin-bottom: 30px; color: #ccc; }
+    .cta-btn { display: inline-block; background-color: #f39c12; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-weight: 600; font-size: 16px; transition: 0.3s; }
+    .cta-btn:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
+
+    /* ================= FOOTER ================= */
+    footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
+    
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
+    .footer-logo h3 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
+    
+    .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
+    .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
+    .footer-box p i { color: #f39c12; margin-top: 4px; }
+    .footer-box a { color: #555; text-decoration: none; transition: 0.3s; }
+    .footer-box a:hover { color: #f39c12; }
+    .social-links { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+    .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
+    .social-links a:hover { background: #f39c12; color: white; transform: translateY(-3px); }
+    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
+    .download-btn:hover { background-color: #e67e22; }
+    .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
+    
+    .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 1024px) {
+      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
+      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
+      .logo-container { flex-direction: column; text-align: center; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .footer-container { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr; text-align: center; }
+      .footer-box p { justify-content: center; }
+      .footer-logo { justify-content: center; }
+      .social-links { justify-content: center; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" title="Google Map"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    
+    <div class="top-actions">
+      <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header>
-        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-      <img src="logo.png" alt="JT CNF Logo" style="height: 45px; border-radius: 50%; background: white;">
-      <div style="display: flex; flex-direction: column; line-height: 1.2;">
-        <span style="font-size: 20px; font-weight: bold; letter-spacing: 1px;">JAMUNA TRADERS</span>
-        <span style="font-size: 11px; color: #f39c12; font-weight: bold;">Customs Clearing & Forwarding</span>
+    <div class="logo-container">
+      <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
+      <div class="company-name">
+        <h1>M/S. JAMUNA TRADERS</h1>
+        <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
       </div>
-    </div><h1>JT CNF</h1></div>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="quote.html" class="nav-btn">Get a Quote</a></li>
       </ul>
     </nav>
-    <div class="header-actions">
-      <a href="mailto:jtcnf.bd@gmail.com" class="action-btn">✉️ Email</a>
-      <a href="https://wa.me/8801811470616" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
-      <a href="#" class="action-btn">📄 Company Profile</a>
-    </div>
   </header>
 
+  <!-- PAGE TITLE -->
   <section class="page-title">
     <h2>Our Services</h2>
     <p>Comprehensive Customs Clearance & Freight Forwarding Solutions</p>
   </section>
 
-  <section class="services-section">
+  <!-- SERVICES CONTENT -->
+  <section class="services-container">
     <div class="services-grid">
-      <div class="service-card"><h3>Import Customs Clearance</h3><p>End-to-end clearance for import shipments.</p><ul><li>Documentation processing</li><li>Duty & tax assessment</li></ul></div>
-      <div class="service-card"><h3>Export Customs Clearance</h3><p>Efficient clearance for export cargo.</p><ul><li>Export documentation</li><li>Customs examination</li></ul></div>
-      <div class="service-card"><h3>Air Cargo Clearance</h3><p>Fast clearance at Dhaka Airport.</p><ul><li>Airway bill processing</li><li>Urgent cargo clearance</li></ul></div>
-      <div class="service-card"><h3>Sea Cargo Clearance</h3><p>Comprehensive clearance at Chattogram Port.</p><ul><li>Bill of Lading handling</li><li>Container release support</li></ul></div>
-      <div class="service-card"><h3>Freight Coordination</h3><p>Coordination with carriers for smooth movement.</p><ul><li>Carrier booking</li><li>Cargo tracking support</li></ul></div>
-      <div class="service-card"><h3>Documentation Support</h3><p>Assistance with import-export documentation.</p><ul><li>HS Code guidance</li><li>Regulatory compliance</li></ul></div>
+      
+      <!-- Service 1 -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Import Customs Clearance">
+        <div class="service-content">
+          <h3>Import Customs Clearance</h3>
+          <p>We provide end-to-end customs clearance services for your import shipments, ensuring fast and hassle-free processing at all major ports.</p>
+          <ul>
+            <li>Documentation processing</li>
+            <li>Duty & tax assessment</li>
+            <li>Cargo release coordination</li>
+          </ul>
+          <a href="quote.html" class="service-btn">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Export Customs Clearance">
+        <div class="service-content">
+          <h3>Export Customs Clearance</h3>
+          <p>Efficient clearance processing for export cargo. We ensure your goods meet all regulatory compliance standards for smooth shipment.</p>
+          <ul>
+            <li>Export documentation</li>
+            <li>Customs examination</li>
+            <li>Shipping bill processing</li>
+          </ul>
+          <a href="quote.html" class="service-btn">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Air Cargo Clearance">
+        <div class="service-content">
+          <h3>Air Cargo Clearance</h3>
+          <p>Fast and reliable clearance services at Dhaka Airport. We prioritize urgent cargo and ensure minimal turnaround time.</p>
+          <ul>
+            <li>Airway bill processing</li>
+            <li>Airport customs handling</li>
+            <li>Urgent cargo clearance</li>
+          </ul>
+          <a href="quote.html" class="service-btn">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=600&q=80" alt="Sea Cargo Clearance">
+        <div class="service-content">
+          <h3>Sea Cargo Clearance</h3>
+          <p>Comprehensive clearance solutions for sea shipments at Chattogram Port. Handling large containers with complete port coordination.</p>
+          <ul>
+            <li>Bill of Lading handling</li>
+            <li>Port customs clearance</li>
+            <li>Container release support</li>
+          </ul>
+          <a href="quote.html" class="service-btn">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Freight Coordination">
+        <div class="service-content">
+          <h3>Freight Coordination</h3>
+          <p>We coordinate with shipping lines, airlines, and transport providers to ensure smooth and timely cargo movement to your destination.</p>
+          <ul>
+            <li>Carrier booking</li>
+            <li>Route planning</li>
+            <li>Cargo tracking support</li>
+          </ul>
+          <a href="quote.html" class="service-btn">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Documentation Support">
+        <div class="service-content">
+          <h3>Documentation Support</h3>
+          <p>Complete assistance with import-export documentation to avoid delays and compliance issues. Expert guidance on HS Codes and LC.</p>
+          <ul>
+            <li>HS Code guidance</li>
+            <li>LC & Bank documentation</li>
+            <li>Regulatory compliance</li>
+          </ul>
+          <a href="quote.html" class="service-btn">Get a Quote</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-   <!-- Footer -->
+  <!-- CALL TO ACTION -->
+  <section class="cta-section">
+    <h2>Need help with your shipment?</h2>
+    <p>Contact our expert team today for a fast and reliable quotation.</p>
+    <a href="contact.html" class="cta-btn">Contact Us Now</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
-      
-      <!-- About / Contact Info -->
       <div class="footer-box">
-        <h4>Contact Us</h4>
-        <p><strong>Phone:</strong> <a href="tel:+8801811470616">+880 1811470616</a></p>
-        <p><strong>Email:</strong> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
-        <div class="social-links">
-          <a href="#" target="_blank">Facebook</a> | 
-          <a href="#" target="_blank">LinkedIn</a>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Logo">
+          <h3>M/S. JAMUNA TRADERS</h3>
         </div>
-        <a href="company-profile.pdf" download class="download-btn">📄 Download Profile</a>
+        <p style="margin-bottom: 5px; font-weight: 500; color: #0f2b46;">Contact Us</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
+        <p style="margin-top: 15px; font-weight: 500; color: #0f2b46;">Social Links</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
       </div>
 
-      <!-- Head Office -->
       <div class="footer-box">
         <h4>Head Office</h4>
-        <p>M/S. Jamuna Trader's (JT CNF)<br>
-        [এখানে আপনার হেড অফিসের ঠিকানা লিখুন]<br>
-        Dhaka, Bangladesh.</p>
+        <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
       </div>
 
-      <!-- Branch Offices -->
       <div class="footer-box">
-        <h4>Service Offices</h4>
-        <p><strong>Dhaka Airport:</strong><br> [এখানে এয়ারপোর্ট অফিসের ঠিকানা লিখুন]</p>
-        <p><strong>Chattogram Port:</strong><br> [এখানে চট্টগ্রাম অফিসের ঠিকানা লিখুন]</p>
+        <h4>Chattogram Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
+        <h4 style="margin-top: 25px;">Benapole Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Nurjahan Mansion, C&F Agent Building Road, Benapole, Jessore.</p>
       </div>
 
+      <div class="footer-box">
+        <h4>Location Map</h4>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
-
-    <!-- Copyright -->
+    
     <div class="footer-bottom">
-      <p>&copy; 2024 M/S. Jamuna Trader's (JT CNF). All Rights Reserved.</p>
+      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
     </div>
   </footer>
 
