@@ -5,132 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shipment Schedule — M/S. JAMUNA TRADERS</title>
   
-  <!-- Browser Favicon (Tab Icon) -->
   <link rel="icon" type="image/png" href="logo.png">
-
-  <!-- Google Fonts (Poppins for body, Playfair Display for Serif headers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background-color: #f9f9f9; color: #333; line-height: 1.6; overflow-x: hidden; }
     
-    /* ================= TOP BAR ================= */
+    /* ================= TOP BAR & HEADER ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
     .social-icons { display: flex; gap: 12px; align-items: center; }
     .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
     .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
     .top-actions { display: flex; gap: 15px; }
-    
     .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
     .top-btn:hover { animation: none; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
-    }
-
-    /* ================= HEADER ================= */
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); } }
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-    
     .logo-container { display: flex; align-items: center; gap: 15px; }
     .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
-    
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
-    .company-name h1 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
+    .company-name h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
     .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-
+    .menu-toggle { display: none; background: none; border: none; font-size: 28px; color: #0f2b46; cursor: pointer; }
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
     nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; transition: 0.3s; }
-    .nav-btn:hover { background-color: #e67e22; transform: translateY(-2px); }
 
-    /* ================= PAGE TITLE (With Image) ================= */
-    .page-title { 
-      background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; 
-      color: white; 
-      text-align: center; 
-      padding: 100px 20px; 
-    }
+    /* ================= PAGE TITLE & SCHEDULE ================= */
+    .page-title { background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 100px 20px; }
     .page-title h2 { font-size: 42px; font-weight: 700; margin-bottom: 15px; }
-    .page-title p { font-size: 16px; color: #eee; max-width: 600px; margin: 0 auto; }
 
-    /* ================= SCHEDULE SECTION ================= */
     .schedule-container { max-width: 1300px; margin: 60px auto; padding: 0 20px; }
-    
-    /* Notice Box */
-    .notice-box { 
-      background-color: #fff3cd; 
-      border-left: 5px solid #ffc107; 
-      padding: 20px; 
-      border-radius: 5px; 
-      margin-bottom: 40px; 
-      display: flex; 
-      align-items: flex-start; 
-      gap: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-    }
+    .notice-box { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 20px; border-radius: 5px; margin-bottom: 40px; display: flex; align-items: flex-start; gap: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
     .notice-box i { color: #ffc107; font-size: 24px; margin-top: 2px; }
     .notice-box p { margin: 0; font-size: 14px; color: #856404; font-weight: 500; }
-
-    /* Table Design */
-    .schedule-card { 
-      background: #ffffff; 
-      border-radius: 12px; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-      border: 1px solid #eee; 
-      margin-bottom: 50px; 
-      overflow: hidden;
-    }
-    .schedule-header { 
-      background-color: #0f2b46; 
-      color: white; 
-      padding: 20px 30px; 
-      display: flex; 
-      align-items: center; 
-      gap: 15px;
-    }
+    
+    .schedule-card { background: #ffffff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; margin-bottom: 50px; overflow: hidden; }
+    .schedule-header { background-color: #0f2b46; color: white; padding: 20px 30px; display: flex; align-items: center; gap: 15px; }
     .schedule-header i { font-size: 24px; color: #f39c12; }
     .schedule-header h3 { font-size: 22px; font-weight: 600; margin: 0; }
-
+    
     .table-responsive { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; min-width: 1000px; }
     th { background-color: #f8f9fa; color: #0f2b46; font-weight: 600; font-size: 14px; text-align: left; padding: 15px 20px; border-bottom: 2px solid #eee; white-space: nowrap; }
     td { padding: 15px 20px; border-bottom: 1px solid #eee; font-size: 14px; color: #555; vertical-align: middle; }
     tr:hover { background-color: #fcfcfc; }
     
-    /* Status Badges */
     .status-badge { display: inline-block; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
     .status-scheduled { background-color: #d4edda; color: #155724; }
     .status-updated { background-color: #fff3cd; color: #856404; }
     .status-delayed { background-color: #f8d7da; color: #721c24; }
-
     .last-updated { text-align: right; font-size: 13px; color: #888; margin-top: -10px; margin-bottom: 30px; font-style: italic; }
 
-    /* ================= CTA SECTION ================= */
     .cta-section { background-color: #0f2b46; color: white; text-align: center; padding: 60px 20px; }
     .cta-section h2 { font-size: 32px; margin-bottom: 15px; font-weight: 600; }
-    .cta-section p { font-size: 16px; margin-bottom: 30px; color: #ccc; }
-    .cta-btn { display: inline-block; background-color: #f39c12; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-weight: 600; font-size: 16px; transition: 0.3s; }
+    .cta-btn { display: inline-block; background-color: #f39c12; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-weight: 600; font-size: 16px; transition: 0.3s; margin-top: 20px; }
     .cta-btn:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
 
     /* ================= FOOTER ================= */
     footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
-    
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
     .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
-    .footer-logo h3 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
-    
+    .footer-logo h3 { font-family: 'Playfair Display', serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
     .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
     .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
     .footer-box p i { color: #f39c12; margin-top: 4px; }
@@ -140,17 +84,27 @@
     .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
     .social-links a:hover { background: #f39c12; color: white; transform: translateY(-3px); }
     .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
-    .download-btn:hover { background-color: #e67e22; }
     .map-container-footer iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
-    
     .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+    .footer-bottom a { color: #aaa; text-decoration: none; transition: 0.3s; }
+    .footer-bottom a:hover { color: #f39c12; }
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 1024px) {
-      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
-      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
-      .logo-container { flex-direction: column; text-align: center; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
+      .top-bar { padding: 5px 10px; flex-direction: row; gap: 10px; }
+      .social-icons { display: none; }
+      .top-btn { padding: 5px 12px; font-size: 11px; }
+      header { padding: 10px 15px; flex-direction: row; flex-wrap: nowrap; }
+      .logo-icon { height: 40px; width: 40px; }
+      .company-name h1 { font-size: 16px; }
+      .company-name span { font-size: 7px; }
+      .menu-toggle { display: block; }
+      nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: #ffffff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 10px 0; z-index: 999; }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav li { width: 100%; text-align: center; border-bottom: 1px solid #eee; }
+      nav a { display: block; padding: 15px; font-size: 15px; }
+      .nav-btn { margin: 10px auto; width: 80%; border-radius: 5px; }
       .footer-container { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
@@ -163,33 +117,31 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="social-icons">
-      <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" title="Google Map"><i class="fa-solid fa-map-location-dot"></i></a>
-      <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
     </div>
-    
     <div class="top-actions">
       <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
       <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
 
-  <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
+      <img src="logo.png" alt="Logo" class="logo-icon">
       <div class="company-name">
         <h1>M/S. JAMUNA TRADERS</h1>
         <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
       </div>
     </div>
-    <nav>
+    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <nav id="navMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -202,16 +154,12 @@
     </nav>
   </header>
 
-  <!-- PAGE TITLE -->
   <section class="page-title">
     <h2>Shipment Schedule</h2>
     <p>Stay updated with our upcoming Air & Sea cargo arrival and clearing schedules.</p>
   </section>
 
-  <!-- SCHEDULE CONTENT -->
   <section class="schedule-container">
-    
-    <!-- Notice -->
     <div class="notice-box">
       <i class="fa-solid fa-circle-info"></i>
       <p><strong>Please Note:</strong> This schedule is manually updated by our operations team. The times and dates provided here are estimates and subject to change based on carrier and port authority updates.</p>
@@ -227,50 +175,13 @@
         <table>
           <thead>
             <tr>
-              <th>Flight Date</th>
-              <th>Airport</th>
-              <th>Airline</th>
-              <th>Flight No.</th>
-              <th>Cargo Weight</th>
-              <th>Expected Landing</th>
-              <th>Clearing Schedule</th>
-              <th>Status</th>
+              <th>Flight Date</th><th>Airport</th><th>Airline</th><th>Flight No.</th><th>Cargo Weight</th><th>Expected Landing</th><th>Clearing Schedule</th><th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Sample Data 1 -->
-            <tr>
-              <td>05 Nov 2024</td>
-              <td>Dhaka (DAC)</td>
-              <td>Emirates SkyCargo</td>
-              <td>EK 5842</td>
-              <td>2,500 kg</td>
-              <td>08:30 AM</td>
-              <td>10:00 AM</td>
-              <td><span class="status-badge status-scheduled">Scheduled</span></td>
-            </tr>
-            <!-- Sample Data 2 -->
-            <tr>
-              <td>07 Nov 2024</td>
-              <td>Dhaka (DAC)</td>
-              <td>Turkish Cargo</td>
-              <td>TK 6412</td>
-              <td>1,800 kg</td>
-              <td>02:15 PM</td>
-              <td>04:00 PM</td>
-              <td><span class="status-badge status-updated">Updated</span></td>
-            </tr>
-            <!-- Sample Data 3 -->
-            <tr>
-              <td>09 Nov 2024</td>
-              <td>Dhaka (DAC)</td>
-              <td>Qatar Airways Cargo</td>
-              <td>QR 8901</td>
-              <td>3,200 kg</td>
-              <td>11:45 PM</td>
-              <td>Next Day</td>
-              <td><span class="status-badge status-scheduled">Scheduled</span></td>
-            </tr>
+            <tr><td>05 Nov 2024</td><td>Dhaka (DAC)</td><td>Emirates SkyCargo</td><td>EK 5842</td><td>2,500 kg</td><td>08:30 AM</td><td>10:00 AM</td><td><span class="status-badge status-scheduled">Scheduled</span></td></tr>
+            <tr><td>07 Nov 2024</td><td>Dhaka (DAC)</td><td>Turkish Cargo</td><td>TK 6412</td><td>1,800 kg</td><td>02:15 PM</td><td>04:00 PM</td><td><span class="status-badge status-updated">Updated</span></td></tr>
+            <tr><td>09 Nov 2024</td><td>Dhaka (DAC)</td><td>Qatar Airways Cargo</td><td>QR 8901</td><td>3,200 kg</td><td>11:45 PM</td><td>Next Day</td><td><span class="status-badge status-scheduled">Scheduled</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -287,66 +198,26 @@
         <table>
           <thead>
             <tr>
-              <th>ETA (Arrival)</th>
-              <th>Port</th>
-              <th>Shipping Line</th>
-              <th>Vessel Name</th>
-              <th>Voyage No.</th>
-              <th>Cargo Weight</th>
-              <th>Clearing Schedule</th>
-              <th>Status</th>
+              <th>ETA (Arrival)</th><th>Port</th><th>Shipping Line</th><th>Vessel Name</th><th>Voyage No.</th><th>Cargo Weight</th><th>Clearing Schedule</th><th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Sample Data 1 -->
-            <tr>
-              <td>10 Nov 2024</td>
-              <td>Chattogram</td>
-              <td>Maersk Line</td>
-              <td>Maersk Sealand</td>
-              <td>V.2401</td>
-              <td>15,000 kg</td>
-              <td>12 Nov 2024</td>
-              <td><span class="status-badge status-scheduled">Scheduled</span></td>
-            </tr>
-            <!-- Sample Data 2 -->
-            <tr>
-              <td>15 Nov 2024</td>
-              <td>Chattogram</td>
-              <td>MSC</td>
-              <td>MSC Aurora</td>
-              <td>V.2405</td>
-              <td>22,000 kg</td>
-              <td>17 Nov 2024</td>
-              <td><span class="status-badge status-delayed">Delayed</span></td>
-            </tr>
-             <!-- Sample Data 3 -->
-             <tr>
-              <td>18 Nov 2024</td>
-              <td>Chattogram</td>
-              <td>CMA CGM</td>
-              <td>CMA CGM Marco Polo</td>
-              <td>V.2409</td>
-              <td>18,500 kg</td>
-              <td>20 Nov 2024</td>
-              <td><span class="status-badge status-scheduled">Scheduled</span></td>
-            </tr>
+            <tr><td>10 Nov 2024</td><td>Chattogram</td><td>Maersk Line</td><td>Maersk Sealand</td><td>V.2401</td><td>15,000 kg</td><td>12 Nov 2024</td><td><span class="status-badge status-scheduled">Scheduled</span></td></tr>
+            <tr><td>15 Nov 2024</td><td>Chattogram</td><td>MSC</td><td>MSC Aurora</td><td>V.2405</td><td>22,000 kg</td><td>17 Nov 2024</td><td><span class="status-badge status-delayed">Delayed</span></td></tr>
+            <tr><td>18 Nov 2024</td><td>Chattogram</td><td>CMA CGM</td><td>CMA CGM Marco Polo</td><td>V.2409</td><td>18,500 kg</td><td>20 Nov 2024</td><td><span class="status-badge status-scheduled">Scheduled</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
     <p class="last-updated">Last updated today at 10:00 AM (BST)</p>
-
   </section>
 
-  <!-- CALL TO ACTION -->
   <section class="cta-section">
     <h2>Need urgent clearance?</h2>
     <p>If you don't see your shipment here or need immediate assistance, please contact us.</p>
     <a href="contact.html" class="cta-btn">Contact Us Now</a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
       <div class="footer-box">
@@ -354,33 +225,22 @@
           <img src="logo.png" alt="Logo">
           <h3>M/S. JAMUNA TRADERS</h3>
         </div>
-        <p style="margin-bottom: 5px; font-weight: 500; color: #0f2b46;">Contact Us</p>
         <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
         <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
-        <p style="margin-top: 15px; font-weight: 500; color: #0f2b46;">Social Links</p>
         <div class="social-links">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
       </div>
-
       <div class="footer-box">
         <h4>Head Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
       </div>
-
       <div class="footer-box">
         <h4>Chattogram Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
-        <h4 style="margin-top: 25px;">Benapole Office</h4>
-        <p><i class="fa-solid fa-location-dot"></i> Nurjahan Mansion, C&F Agent Building Road, Benapole, Jessore.</p>
       </div>
-
       <div class="footer-box">
         <h4>Location Map</h4>
         <div class="map-container-footer">
@@ -388,11 +248,20 @@
         </div>
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
+      <p>&copy; <span id="currentYear"></span> M/S. Jamuna Traders. All Rights Reserved.</p>
+      <div style="display: flex; gap: 15px;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
     </div>
   </footer>
 
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
