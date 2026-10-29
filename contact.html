@@ -5,80 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — M/S. JAMUNA TRADERS</title>
   
-  <!-- Browser Favicon (Tab Icon) -->
   <link rel="icon" type="image/png" href="logo.png">
-
-  <!-- Google Fonts (Poppins for body, Playfair Display for Serif headers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background-color: #f9f9f9; color: #333; line-height: 1.6; overflow-x: hidden; }
     
-    /* ================= TOP BAR ================= */
+    /* ================= TOP BAR & HEADER ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
     .social-icons { display: flex; gap: 12px; align-items: center; }
     .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
     .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
     .top-actions { display: flex; gap: 15px; }
-    
     .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
     .top-btn:hover { animation: none; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
-    }
-
-    /* ================= HEADER ================= */
+    @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); } }
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-    
     .logo-container { display: flex; align-items: center; gap: 15px; }
     .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
-    
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
-    .company-name h1 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
+    .company-name h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
     .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-
+    .menu-toggle { display: none; background: none; border: none; font-size: 28px; color: #0f2b46; cursor: pointer; }
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
     nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
     .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; transition: 0.3s; }
-    .nav-btn:hover { background-color: #e67e22; transform: translateY(-2px); }
 
-    /* ================= PAGE TITLE (With Image) ================= */
-    .page-title { 
-      background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover; 
-      color: white; 
-      text-align: center; 
-      padding: 100px 20px; 
-    }
+    /* ================= PAGE TITLE ================= */
+    .page-title { background: linear-gradient(rgba(10, 28, 46, 0.85), rgba(10, 28, 46, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; text-align: center; padding: 100px 20px; }
     .page-title h2 { font-size: 42px; font-weight: 700; margin-bottom: 15px; }
-    .page-title p { font-size: 16px; color: #eee; max-width: 600px; margin: 0 auto; }
 
     /* ================= CONTACT SECTION ================= */
     .contact-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; }
-    
-    /* Contact Info */
     .contact-info { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; }
     .contact-info h3 { font-size: 24px; color: #0f2b46; margin-bottom: 25px; font-weight: 600; border-left: 4px solid #f39c12; padding-left: 10px; }
     .info-item { display: flex; gap: 15px; margin-bottom: 25px; align-items: flex-start; }
     .info-item i { font-size: 20px; color: #f39c12; margin-top: 5px; }
     .info-item h4 { font-size: 16px; color: #333; font-weight: 600; margin-bottom: 5px; }
     .info-item p { font-size: 14px; color: #666; margin: 0; line-height: 1.6; }
-    
+    .info-item a { color: #666; text-decoration: none; }
     .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background-color: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 10px; transition: 0.3s; }
     .whatsapp-btn:hover { background-color: #1ebe5d; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
 
-    /* Contact Form */
     .contact-form { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; }
     .contact-form h3 { font-size: 24px; color: #0f2b46; margin-bottom: 25px; font-weight: 600; border-left: 4px solid #f39c12; padding-left: 10px; }
     .form-group { margin-bottom: 20px; }
@@ -86,11 +61,9 @@
     .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Poppins', sans-serif; font-size: 14px; background: #fafafa; transition: 0.3s; }
     .form-group input:focus, .form-group textarea:focus { border-color: #f39c12; background: #fff; outline: none; box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1); }
     .form-group textarea { height: 120px; resize: vertical; }
-    
     .submit-btn { background-color: #f39c12; color: white; padding: 14px 30px; border: none; border-radius: 5px; font-weight: 600; font-size: 16px; cursor: pointer; width: 100%; transition: 0.3s; }
     .submit-btn:hover { background-color: #e67e22; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
 
-    /* ================= MAP SECTION ================= */
     .map-section { max-width: 1200px; margin: 0 auto 80px; padding: 0 20px; }
     .map-container { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; }
     .map-container iframe { width: 100%; height: 400px; border: none; }
@@ -98,11 +71,9 @@
     /* ================= FOOTER ================= */
     footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
-    
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
     .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
-    .footer-logo h3 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
-    
+    .footer-logo h3 { font-family: 'Playfair Display', serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
     .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
     .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
     .footer-box p i { color: #f39c12; margin-top: 4px; }
@@ -112,18 +83,28 @@
     .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
     .social-links a:hover { background: #f39c12; color: white; transform: translateY(-3px); }
     .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
-    .download-btn:hover { background-color: #e67e22; }
     .map-container-footer iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
-    
     .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
+    .footer-bottom a { color: #aaa; text-decoration: none; transition: 0.3s; }
+    .footer-bottom a:hover { color: #f39c12; }
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 1024px) {
-      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
-      header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
-      .logo-container { flex-direction: column; text-align: center; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
-      .contact-container { grid-template-columns: 1fr; }
+      .top-bar { padding: 5px 10px; flex-direction: row; gap: 10px; }
+      .social-icons { display: none; }
+      .top-btn { padding: 5px 12px; font-size: 11px; }
+      header { padding: 10px 15px; flex-direction: row; flex-wrap: nowrap; }
+      .logo-icon { height: 40px; width: 40px; }
+      .company-name h1 { font-size: 16px; }
+      .company-name span { font-size: 7px; }
+      .menu-toggle { display: block; }
+      nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: #ffffff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 10px 0; z-index: 999; }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav li { width: 100%; text-align: center; border-bottom: 1px solid #eee; }
+      nav a { display: block; padding: 15px; font-size: 15px; }
+      .nav-btn { margin: 10px auto; width: 80%; border-radius: 5px; }
+      .contact-container { grid-template-columns: 1fr; gap: 30px; }
       .footer-container { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
@@ -136,33 +117,31 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="social-icons">
-      <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" title="Google Map"><i class="fa-solid fa-map-location-dot"></i></a>
-      <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
     </div>
-    
     <div class="top-actions">
       <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
       <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
 
-  <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
+      <img src="logo.png" alt="Logo" class="logo-icon">
       <div class="company-name">
         <h1>M/S. JAMUNA TRADERS</h1>
         <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
       </div>
     </div>
-    <nav>
+    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <nav id="navMenu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -175,35 +154,28 @@
     </nav>
   </header>
 
-  <!-- PAGE TITLE -->
   <section class="page-title">
     <h2>Contact Us</h2>
     <p>We are here to help you with your customs and freight needs. Reach out to us today.</p>
   </section>
 
-  <!-- CONTACT FORM & INFO -->
   <section class="contact-container">
-    
-    <!-- Contact Information -->
     <div class="contact-info">
       <h3>Get in Touch</h3>
-      
       <div class="info-item">
         <i class="fa-solid fa-phone"></i>
         <div>
           <h4>Hotline</h4>
-          <p><a href="tel:+8801811470616" style="color:#666; text-decoration:none;">+880 1811470616</a></p>
+          <p><a href="tel:+8801811470616">+880 1811470616</a></p>
         </div>
       </div>
-      
       <div class="info-item">
         <i class="fa-solid fa-envelope"></i>
         <div>
           <h4>Email Address</h4>
-          <p><a href="mailto:jtcnf.bd@gmail.com" style="color:#666; text-decoration:none;">jtcnf.bd@gmail.com</a></p>
+          <p><a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
         </div>
       </div>
-
       <div class="info-item">
         <i class="fa-solid fa-location-dot"></i>
         <div>
@@ -211,7 +183,6 @@
           <p>Shamsur Rahman Bhaban (2nd Floor),<br>18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
         </div>
       </div>
-
       <div class="info-item">
         <i class="fa-solid fa-building"></i>
         <div>
@@ -219,7 +190,6 @@
           <p>Dhaka Airport & Chattogram Port</p>
         </div>
       </div>
-
       <div class="info-item">
         <i class="fa-brands fa-whatsapp"></i>
         <div>
@@ -230,7 +200,6 @@
       </div>
     </div>
 
-    <!-- Contact Form -->
     <div class="contact-form">
       <h3>Send us a Message</h3>
       <form id="contactForm">
@@ -253,17 +222,14 @@
         <button type="submit" class="submit-btn">Send Message via Email</button>
       </form>
     </div>
-
   </section>
 
-  <!-- GOOGLE MAP -->
   <section class="map-section">
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
       <div class="footer-box">
@@ -271,33 +237,22 @@
           <img src="logo.png" alt="Logo">
           <h3>M/S. JAMUNA TRADERS</h3>
         </div>
-        <p style="margin-bottom: 5px; font-weight: 500; color: #0f2b46;">Contact Us</p>
         <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
         <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
-        <p style="margin-top: 15px; font-weight: 500; color: #0f2b46;">Social Links</p>
         <div class="social-links">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
       </div>
-
       <div class="footer-box">
         <h4>Head Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
       </div>
-
       <div class="footer-box">
         <h4>Chattogram Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
-        <h4 style="margin-top: 25px;">Benapole Office</h4>
-        <p><i class="fa-solid fa-location-dot"></i> Nurjahan Mansion, C&F Agent Building Road, Benapole, Jessore.</p>
       </div>
-
       <div class="footer-box">
         <h4>Location Map</h4>
         <div class="map-container-footer">
@@ -305,38 +260,32 @@
         </div>
       </div>
     </div>
-    
-        <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
-      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
+      <p>&copy; <span id="currentYear"></span> M/S. Jamuna Traders. All Rights Reserved.</p>
       <div style="display: flex; gap: 15px;">
-        <a href="privacy.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Privacy Policy</a>
-        <a href="terms.html" style="color: #aaa; text-decoration: none; font-weight: 500;">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript for Form Submission -->
   <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Contact Form Email Integration
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
       var name = document.getElementById('name').value;
       var phone = document.getElementById('phone').value;
       var email = document.getElementById('email').value;
       var message = document.getElementById('message').value;
-      
       var subject = encodeURIComponent('Contact from Website: ' + name);
-      var body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Phone: ' + phone + '\n' +
-        'Email: ' + (email ? email : 'Not provided') + '\n\n' +
-        'Message:\n' + message
-      );
-      
-      // This will open the user's default email app with the information pre-filled
+      var body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nEmail: ' + (email ? email : 'Not provided') + '\n\nMessage:\n' + message);
       window.location.href = 'mailto:jtcnf.bd@gmail.com?subject=' + subject + '&body=' + body;
     });
   </script>
-
 </body>
 </html>
