@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M/S. JAMUNA TRADERS — Customs Clearing & Forwarding</title>
   
-  <!-- Google Fonts (Poppins) -->
+  <!-- Google Fonts (Poppins for body, Playfair Display for Serif headers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,20 +24,7 @@
     .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
     .top-actions { display: flex; gap: 15px; }
     
-    /* Pulse Animation */
-    .top-btn { 
-      display: flex; 
-      align-items: center; 
-      gap: 8px; 
-      padding: 8px 20px; 
-      border-radius: 30px; 
-      text-decoration: none; 
-      font-weight: 500; 
-      font-size: 13px; 
-      color: white; 
-      animation: pulse 2s infinite;
-      transition: 0.3s;
-    }
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
     .top-btn:hover { animation: none; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
@@ -50,11 +37,15 @@
 
     /* ================= HEADER ================= */
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    
     .logo-container { display: flex; align-items: center; gap: 15px; }
-    .logo-icon { height: 50px; width: 50px; border-radius: 50%; border: 2px solid #f39c12; object-fit: cover; }
+    /* লোগো গোল না করে স্কয়ার রাখা হয়েছে যাতে পুরোটা দেখা যায় */
+    .logo-icon { height: 70px; width: 70px; border-radius: 5px; object-fit: contain; }
+    
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
-    .company-name h1 { font-size: 24px; font-weight: 600; color: #0f2b46; letter-spacing: 0.5px; }
-    .company-name span { font-size: 10px; color: #f39c12; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+    /* Times New Roman ধাঁচের সেরিফ ফন্ট এবং বড় সাইজ */
+    .company-name h1 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; font-size: 32px; font-weight: 700; color: #0f2b46; letter-spacing: 1px; margin-bottom: 2px; }
+    .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
     nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
@@ -76,7 +67,7 @@
     .section-title h2 { font-size: 32px; color: #0f2b46; font-weight: 600; margin-bottom: 10px; }
     .section-title p { color: #666; font-size: 15px; max-width: 700px; margin: 0 auto; font-weight: 400; }
 
-    /* ================= EXPERTISE SECTION (Zigzag) ================= */
+    /* ================= EXPERTISE SECTION ================= */
     .expertise-row { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
     .expertise-row.reverse { flex-direction: row-reverse; }
     .expertise-img { flex: 1; width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; max-height: 400px;}
@@ -144,9 +135,12 @@
     /* ================= FOOTER ================= */
     footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
+    
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-    .footer-logo img { height: 45px; width: 45px; border-radius: 50%; border: 1px solid #f39c12; object-fit: cover; }
-    .footer-logo h3 { color: #0f2b46; font-size: 18px; font-weight: 600; line-height: 1.2; }
+    .footer-logo img { height: 60px; width: 60px; border-radius: 5px; object-fit: contain; }
+    /* ফুটারেও Times New Roman ফন্ট */
+    .footer-logo h3 { font-family: 'Playfair Display', 'Times New Roman', Times, serif; color: #0f2b46; font-size: 22px; font-weight: 700; line-height: 1.2; }
+    
     .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
     .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
     .footer-box p i { color: #f39c12; margin-top: 4px; }
@@ -159,7 +153,6 @@
     .download-btn:hover { background-color: #e67e22; }
     .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
     
-    /* Navy Blue Bottom Bar */
     .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
 
     /* ================= RESPONSIVE ================= */
@@ -172,11 +165,9 @@
       .hero h2 { font-size: 32px; }
       .expertise-row, .expertise-row.reverse { flex-direction: column; gap: 30px; text-align: center; }
       .services-layout { grid-template-columns: 1fr; }
-      
       .ports-container { flex-direction: column; text-align: center; }
       .ports-left h2, .ports-left p { text-align: center; }
       .ports-right { margin-top: 40px; }
-      
       .footer-container { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
@@ -191,7 +182,7 @@
 </head>
 <body>
 
-  <!-- TOP BAR (Animated Buttons) -->
+  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="social-icons">
       <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -211,7 +202,7 @@
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <!-- এখানে আপনার GitHub-এ আপলোড করা লোগোর নাম দিবেন -->
+      <!-- লোগোর নাম logo.png দেওয়া হয়েছে -->
       <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
       <div class="company-name">
         <h1>M/S. JAMUNA TRADERS</h1>
@@ -400,7 +391,7 @@
     <div class="footer-container">
       <div class="footer-box">
         <div class="footer-logo">
-          <!-- এখানে আপনার GitHub-এ আপলোড করা লোগোর নাম দিবেন -->
+          <!-- ফুটারেও logo.png -->
           <img src="logo.png" alt="Logo">
           <h3>M/S. JAMUNA TRADERS</h3>
         </div>
