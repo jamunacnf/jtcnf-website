@@ -17,16 +17,36 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background-color: #ffffff; color: #333; line-height: 1.6; overflow-x: hidden; }
     
-    /* ================= TOP BAR ================= */
+    /* ================= TOP BAR WITH ANIMATIONS ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
     .social-icons { display: flex; gap: 12px; align-items: center; }
     .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
     .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
     .top-actions { display: flex; gap: 15px; }
-    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; transition: 0.3s; }
+    
+    /* Pulse Animation */
+    .top-btn { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      padding: 8px 20px; 
+      border-radius: 30px; 
+      text-decoration: none; 
+      font-weight: 500; 
+      font-size: 13px; 
+      color: white; 
+      animation: pulse 2s infinite;
+      transition: 0.3s;
+    }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
-    .top-btn:hover { transform: scale(1.05); opacity: 0.9; }
+    .top-btn:hover { animation: none; transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
+    }
 
     /* ================= HEADER ================= */
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
@@ -39,8 +59,8 @@
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
     nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
-    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; }
-    .nav-btn:hover { background-color: #e67e22; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; transition: 0.3s; }
+    .nav-btn:hover { background-color: #e67e22; transform: translateY(-2px); }
 
     /* ================= HERO SECTION ================= */
     .hero { position: relative; height: 60vh; min-height: 450px; display: flex; align-items: center; padding: 0 8%; background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.4) 100%), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; }
@@ -48,7 +68,7 @@
     .hero h2 { font-size: 45px; margin-bottom: 20px; line-height: 1.2; font-weight: 600; }
     .hero p { font-size: 16px; margin-bottom: 30px; color: #eee; font-weight: 300; }
     .btn-primary { display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 15px; background-color: #f39c12; color: white; transition: 0.3s; }
-    .btn-primary:hover { background-color: #e67e22; transform: translateY(-2px); }
+    .btn-primary:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
 
     /* ================= GENERAL SECTIONS ================= */
     .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
@@ -95,7 +115,7 @@
     .client-logo:hover { opacity: 1; color: #f39c12; }
     @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 50px)); } }
 
-    /* ================= PORTS SECTION (Exact SS Match) ================= */
+    /* ================= PORTS SECTION ================= */
     .ports-section { padding: 80px 20px; background-color: #ffffff; }
     .ports-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 50px; }
     
@@ -104,16 +124,8 @@
     .ports-left p { color: #666; font-size: 15px; margin-bottom: 40px; line-height: 1.8; }
     
     .ports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .port-item { 
-      border: 1px solid #ddd; 
-      padding: 20px 25px; 
-      display: flex; 
-      align-items: center; 
-      gap: 20px; 
-      background: #fff;
-      transition: 0.3s;
-    }
-    .port-item:hover { border-color: #e67e22; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    .port-item { border: 1px solid #ddd; padding: 20px 25px; display: flex; align-items: center; gap: 20px; background: #fff; transition: 0.3s; }
+    .port-item:hover { border-color: #e67e22; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transform: translateY(-3px); }
     .port-item i { font-size: 28px; color: #e67e22; }
     .port-item span { font-size: 16px; color: #222; font-weight: 500; }
     
@@ -133,7 +145,7 @@
     footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-    .footer-logo img { height: 45px; border-radius: 50%; border: 1px solid #f39c12; }
+    .footer-logo img { height: 45px; width: 45px; border-radius: 50%; border: 1px solid #f39c12; object-fit: cover; }
     .footer-logo h3 { color: #0f2b46; font-size: 18px; font-weight: 600; line-height: 1.2; }
     .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
     .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
@@ -142,10 +154,12 @@
     .footer-box a:hover { color: #f39c12; }
     .social-links { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
     .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
-    .social-links a:hover { background: #f39c12; color: white; }
+    .social-links a:hover { background: #f39c12; color: white; transform: translateY(-3px); }
     .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
     .download-btn:hover { background-color: #e67e22; }
     .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
+    
+    /* Navy Blue Bottom Bar */
     .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
 
     /* ================= RESPONSIVE ================= */
@@ -159,7 +173,6 @@
       .expertise-row, .expertise-row.reverse { flex-direction: column; gap: 30px; text-align: center; }
       .services-layout { grid-template-columns: 1fr; }
       
-      /* Ports Responsive */
       .ports-container { flex-direction: column; text-align: center; }
       .ports-left h2, .ports-left p { text-align: center; }
       .ports-right { margin-top: 40px; }
@@ -178,7 +191,7 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
+  <!-- TOP BAR (Animated Buttons) -->
   <div class="top-bar">
     <div class="social-icons">
       <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -198,7 +211,8 @@
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="Logo" class="logo-icon">
+      <!-- এখানে আপনার GitHub-এ আপলোড করা লোগোর নাম দিবেন -->
+      <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
       <div class="company-name">
         <h1>M/S. JAMUNA TRADERS</h1>
         <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
@@ -329,36 +343,19 @@
   <!-- PORTS SECTION (Exact SS Match) -->
   <section class="ports-section">
     <div class="ports-container">
-      <!-- Left Side: Text and Grid -->
       <div class="ports-left">
         <h2>Serving Major Ports Across Bangladesh</h2>
         <p>We are your one-stop shop for efficient customs clearance at all of the major ports. Our carrying and forwarding services ensure effective import and export management, utilizing advanced freight transport methods.</p>
         
         <div class="ports-grid">
-          <div class="port-item">
-            <i class="fa-solid fa-plane"></i>
-            <span>Dhaka Customs (AFU)</span>
-          </div>
-          <div class="port-item">
-            <i class="fa-solid fa-train"></i>
-            <span>ICD Kamalapur Customs</span>
-          </div>
-          <div class="port-item">
-            <i class="fa-solid fa-ship"></i>
-            <span>Chattogram Customs</span>
-          </div>
-          <div class="port-item">
-            <i class="fa-solid fa-truck"></i>
-            <span>Benapole Customs</span>
-          </div>
-          <div class="port-item">
-            <i class="fa-solid fa-anchor"></i>
-            <span>Pangaon Customs</span>
-          </div>
+          <div class="port-item"><i class="fa-solid fa-plane"></i> <span>Dhaka Customs (AFU)</span></div>
+          <div class="port-item"><i class="fa-solid fa-train"></i> <span>ICD Kamalapur Customs</span></div>
+          <div class="port-item"><i class="fa-solid fa-ship"></i> <span>Chattogram Customs</span></div>
+          <div class="port-item"><i class="fa-solid fa-truck"></i> <span>Benapole Customs</span></div>
+          <div class="port-item"><i class="fa-solid fa-anchor"></i> <span>Pangaon Customs</span></div>
         </div>
       </div>
 
-      <!-- Right Side: Customs Logo -->
       <div class="ports-right">
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Bangladesh_Customs_Logo.png/220px-Bangladesh_Customs_Logo.png" alt="Bangladesh Customs">
       </div>
@@ -403,6 +400,7 @@
     <div class="footer-container">
       <div class="footer-box">
         <div class="footer-logo">
+          <!-- এখানে আপনার GitHub-এ আপলোড করা লোগোর নাম দিবেন -->
           <img src="logo.png" alt="Logo">
           <h3>M/S. JAMUNA TRADERS</h3>
         </div>
@@ -441,6 +439,7 @@
       </div>
     </div>
     
+    <!-- Navy Blue Bottom Bar -->
     <div class="footer-bottom">
       <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
     </div>
