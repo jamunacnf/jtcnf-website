@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M/S. JAMUNA TRADERS — Customs Clearing & Forwarding</title>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Poppins) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,11 +19,11 @@
     
     /* ================= TOP BAR ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .social-icons { display: flex; gap: 15px; }
-    .social-icons a { color: white; font-size: 16px; transition: 0.3s; }
-    .social-icons a:hover { color: #f39c12; transform: scale(1.2); }
+    .social-icons { display: flex; gap: 12px; align-items: center; }
+    .social-icons a { color: white; font-size: 15px; transition: 0.3s; }
+    .social-icons a:hover { color: #f39c12; transform: translateY(-2px); }
     .top-actions { display: flex; gap: 15px; }
-    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 13px; color: white; transition: 0.3s; }
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 13px; color: white; transition: 0.3s; }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
     .top-btn:hover { transform: scale(1.05); opacity: 0.9; }
@@ -31,119 +31,132 @@
     /* ================= HEADER ================= */
     header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
     .logo-container { display: flex; align-items: center; gap: 15px; }
-    .logo-icon { height: 55px; width: 55px; border-radius: 50%; border: 2px solid #f39c12; object-fit: cover; }
+    .logo-icon { height: 50px; width: 50px; border-radius: 50%; border: 2px solid #f39c12; object-fit: cover; }
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
-    .company-name h1 { font-size: 26px; font-weight: 700; color: #0f2b46; }
-    .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .company-name h1 { font-size: 24px; font-weight: 600; color: #0f2b46; letter-spacing: 0.5px; }
+    .company-name span { font-size: 10px; color: #f39c12; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
 
     nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
-    nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 15px; transition: 0.3s; }
+    nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
-    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 600; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 500; }
     .nav-btn:hover { background-color: #e67e22; }
 
     /* ================= HERO SECTION ================= */
-    .hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: center; padding: 0 10%; background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.4) 100%), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; }
+    .hero { position: relative; height: 60vh; min-height: 450px; display: flex; align-items: center; padding: 0 8%; background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.4) 100%), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; }
     .hero-content { color: white; max-width: 800px; }
-    .hero h2 { font-size: 50px; margin-bottom: 20px; line-height: 1.2; font-weight: 700; }
-    .hero p { font-size: 17px; margin-bottom: 30px; color: #eee; font-weight: 400; }
-    .btn-primary { display: inline-block; padding: 14px 32px; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 16px; background-color: #f39c12; color: white; transition: 0.3s; }
-    .btn-primary:hover { background-color: #e67e22; transform: translateY(-3px); }
+    .hero h2 { font-size: 45px; margin-bottom: 20px; line-height: 1.2; font-weight: 600; }
+    .hero p { font-size: 16px; margin-bottom: 30px; color: #eee; font-weight: 300; }
+    .btn-primary { display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 15px; background-color: #f39c12; color: white; transition: 0.3s; }
+    .btn-primary:hover { background-color: #e67e22; transform: translateY(-2px); }
 
     /* ================= GENERAL SECTIONS ================= */
     .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
     .section-title { text-align: center; margin-bottom: 50px; }
-    .section-title h2 { font-size: 34px; color: #0f2b46; font-weight: 700; margin-bottom: 15px; }
-    .section-title p { color: #666; font-size: 16px; max-width: 700px; margin: 0 auto; }
+    .section-title h2 { font-size: 32px; color: #0f2b46; font-weight: 600; margin-bottom: 10px; }
+    .section-title p { color: #666; font-size: 15px; max-width: 700px; margin: 0 auto; font-weight: 400; }
 
-    /* ================= EXPERTISE SECTION ================= */
-    .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-    .expertise-img-container img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .expertise-text h3 { font-size: 28px; color: #0f2b46; margin-bottom: 15px; font-weight: 700; }
-    .expertise-text p { color: #555; margin-bottom: 25px; font-size: 16px; }
+    /* ================= EXPERTISE SECTION (Zigzag) ================= */
+    .expertise-row { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
+    .expertise-row.reverse { flex-direction: row-reverse; }
+    .expertise-img { flex: 1; width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover; max-height: 400px;}
+    .expertise-text { flex: 1; }
+    .expertise-text h3 { font-size: 28px; color: #0f2b46; margin-bottom: 15px; font-weight: 600; line-height: 1.3; }
+    .expertise-text p { color: #555; margin-bottom: 15px; font-size: 15px; font-weight: 400; }
 
     /* ================= DIVERSE GOODS ================= */
     .goods-bg { background-color: #f9f9f9; padding: 80px 20px; }
-    .goods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-    .goods-item { background: white; padding: 30px 20px; border-radius: 5px; text-align: center; border: 1px solid #eee; transition: all 0.3s ease; }
+    .goods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .goods-item { background: white; padding: 25px 15px; border-radius: 5px; text-align: center; border: 1px solid #eee; transition: all 0.3s ease; }
     .goods-item:hover { border-color: #f39c12; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .goods-item i { font-size: 35px; color: #f39c12; margin-bottom: 15px; display: block; }
-    .goods-item span { font-weight: 600; font-size: 15px; color: #333; }
+    .goods-item i { font-size: 30px; color: #f39c12; margin-bottom: 15px; display: block; }
+    .goods-item span { font-weight: 500; font-size: 14px; color: #333; }
 
-    /* ================= SERVICES SECTION ================= */
-    .services-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
-    .services-text h2 { font-size: 34px; color: #0f2b46; margin-bottom: 20px; font-weight: 700; }
-    .services-text p { color: #555; font-size: 16px; line-height: 1.8; }
+    /* ================= SERVICES SECTION (With Images) ================= */
+    .services-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: flex-start; }
+    .services-text h2 { font-size: 32px; color: #0f2b46; margin-bottom: 20px; font-weight: 600; }
+    .services-text p { color: #555; font-size: 15px; line-height: 1.8; }
+    
     .service-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .service-card { border: 1px solid #eee; padding: 30px 20px; border-radius: 5px; text-align: center; transition: 0.3s; }
-    .service-card:hover { border-color: #f39c12; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .service-card i { font-size: 30px; color: #f39c12; margin-bottom: 15px; }
-    .service-card h4 { font-size: 18px; color: #0f2b46; margin-bottom: 10px; font-weight: 600; }
-    .service-card a { display: inline-block; margin-top: 15px; color: #333; font-size: 13px; font-weight: 600; text-decoration: none; text-transform: uppercase; }
-    .service-card a:hover { color: #f39c12; }
+    .service-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+    .service-card:hover { border-color: #f39c12; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
+    .service-card img { width: 100%; height: 140px; object-fit: cover; }
+    .service-content { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+    .service-content h4 { font-size: 16px; color: #0f2b46; margin-bottom: 10px; font-weight: 600; }
+    .service-content a { display: inline-block; margin-top: 10px; color: #f39c12; font-size: 13px; font-weight: 500; text-decoration: none; text-transform: uppercase; }
+    .service-content a:hover { color: #e67e22; }
 
     /* ================= CLIENTS MARQUEE ================= */
-    .clients-section { background: #f4f7f6; padding: 50px 0; overflow: hidden; }
-    .clients-section h2 { text-align: center; color: #0f2b46; margin-bottom: 30px; font-size: 28px; }
+    .clients-section { background: #f4f7f6; padding: 40px 0; overflow: hidden; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+    .clients-section h2 { text-align: center; color: #0f2b46; margin-bottom: 30px; font-size: 24px; font-weight: 600; }
     .marquee { display: flex; overflow: hidden; user-select: none; gap: 50px; }
-    .marquee-content { display: flex; gap: 50px; animation: scroll 20s linear infinite; }
-    .client-logo { font-size: 24px; font-weight: bold; color: #888; opacity: 0.6; display: flex; align-items: center; gap: 10px; }
+    .marquee-content { display: flex; gap: 50px; animation: scroll 25s linear infinite; }
+    .client-logo { font-size: 20px; font-weight: 600; color: #999; display: flex; align-items: center; gap: 10px; opacity: 0.7; transition: 0.3s; }
+    .client-logo:hover { opacity: 1; color: #f39c12; }
     @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 50px)); } }
 
     /* ================= PORTS SECTION ================= */
     .ports-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center; max-width: 1200px; margin: 0 auto; }
     .ports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .port-item { border: 1px solid #eee; padding: 20px; border-radius: 5px; display: flex; align-items: center; gap: 15px; transition: 0.3s; }
+    .port-item { border: 1px solid #eee; padding: 20px; border-radius: 5px; display: flex; align-items: center; gap: 15px; transition: 0.3s; background: white; }
     .port-item:hover { border-color: #f39c12; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
     .port-item i { font-size: 24px; color: #f39c12; }
-    .port-item span { font-weight: 600; color: #333; font-size: 15px; }
-    .customs-logo img { width: 100%; max-width: 300px; display: block; margin: 0 auto; }
+    .port-item span { font-weight: 500; color: #333; font-size: 15px; }
+    .customs-logo img { width: 100%; max-width: 280px; display: block; margin: 0 auto; }
 
     /* ================= BLOG SECTION ================= */
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .blog-card { background: white; border: 1px solid #eee; border-radius: 5px; overflow: hidden; transition: 0.3s; }
-    .blog-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .blog-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; }
+    .blog-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
     .blog-card img { width: 100%; height: 200px; object-fit: cover; }
     .blog-content { padding: 25px; }
-    .blog-content h4 { font-size: 18px; color: #0f2b46; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+    .blog-content h4 { font-size: 17px; color: #0f2b46; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
     .blog-content p { color: #666; font-size: 14px; margin-bottom: 15px; }
 
-    /* ================= FOOTER ================= */
-    footer { background-color: #0a1c2e; color: #ddd; padding: 60px 20px 20px; font-size: 14px; }
+    /* ================= FOOTER (White Theme) ================= */
+    footer { background-color: #ffffff; color: #333; padding: 60px 20px 0; font-size: 14px; border-top: 1px solid #eee; }
     .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
-    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-    .footer-logo img { height: 40px; border-radius: 50%; }
-    .footer-logo h3 { color: white; font-size: 20px; font-weight: 700; }
     
-    .footer-box h4 { color: white; margin-bottom: 20px; font-size: 18px; font-weight: 600; }
-    .footer-box p { margin-bottom: 12px; color: #bbb; line-height: 1.6; display: flex; gap: 10px; }
-    .footer-box p i { color: #f39c12; margin-top: 5px; }
-    .footer-box a { color: #bbb; text-decoration: none; transition: 0.3s; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .footer-logo img { height: 45px; border-radius: 50%; border: 1px solid #f39c12; }
+    .footer-logo h3 { color: #0f2b46; font-size: 18px; font-weight: 600; line-height: 1.2; }
+    
+    .footer-box h4 { color: #0f2b46; margin-bottom: 20px; font-size: 16px; font-weight: 600; }
+    .footer-box p { margin-bottom: 12px; color: #555; line-height: 1.6; display: flex; gap: 10px; font-size: 14px; }
+    .footer-box p i { color: #f39c12; margin-top: 4px; }
+    .footer-box a { color: #555; text-decoration: none; transition: 0.3s; }
     .footer-box a:hover { color: #f39c12; }
     
-    .social-links { display: flex; gap: 10px; margin-top: 15px; }
-    .social-links a { background: #1a3a5c; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; }
-    .social-links a:hover { background: #f39c12; }
+    .social-links { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+    .social-links a { background: #f0f0f0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s; }
+    .social-links a:hover { background: #f39c12; color: white; }
     
-    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 12px; }
+    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 500; text-decoration: none; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
+    .download-btn:hover { background-color: #e67e22; }
     
-    .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 5px; }
+    .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
     
-    .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
+    /* Navy Blue Bottom Bar */
+    .footer-bottom { background-color: #0a1c2e; color: #aaa; text-align: center; padding: 20px; font-size: 13px; }
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 1024px) {
-      .top-bar { flex-direction: column; gap: 15px; }
+      .top-bar { flex-direction: column; gap: 15px; padding: 15px; }
       header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
       .logo-container { flex-direction: column; text-align: center; }
       nav ul { flex-wrap: wrap; justify-content: center; }
       .hero { height: auto; padding: 80px 20px; text-align: center; background-attachment: scroll; }
-      .hero h2 { font-size: 36px; }
-      .expertise-grid, .services-layout, .ports-layout { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 32px; }
+      .expertise-row, .expertise-row.reverse { flex-direction: column; gap: 30px; text-align: center; }
+      .services-layout, .ports-layout { grid-template-columns: 1fr; }
       .footer-container { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
-      .service-cards-grid, .ports-grid, .footer-container { grid-template-columns: 1fr; }
+      .service-cards-grid, .ports-grid { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr; text-align: center; }
+      .footer-box p { justify-content: center; }
+      .footer-logo { justify-content: center; }
+      .social-links { justify-content: center; }
     }
   </style>
 </head>
@@ -151,19 +164,19 @@
 
   <!-- TOP BAR -->
   <div class="top-bar">
+    <!-- All Social Icons -->
     <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" title="Google Map"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
     </div>
+    
     <div class="top-actions">
       <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
       <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    </div>
-    <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
     </div>
   </div>
 
@@ -198,19 +211,27 @@
     </div>
   </section>
 
-  <!-- EXPERTISE SECTION -->
+  <!-- EXPERTISE SECTION (2 Different Pictures) -->
   <section class="section-container">
-    <div class="expertise-grid">
-      <div class="expertise-img-container">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Cargo Containers">
-      </div>
+    
+    <!-- Block 1 -->
+    <div class="expertise-row">
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Containers and Truck" class="expertise-img">
       <div class="expertise-text">
         <h3>50 Years of Expertise in Hassle-Free Customs Clearing</h3>
         <p>For over 50 years, we’ve been providing tension-free customs clearance and logistics solutions. Our data-driven strategies and streamlined procedures ensure fast, cost-effective, and reliable services for businesses of all sizes.</p>
+      </div>
+    </div>
+
+    <!-- Block 2 (Reversed) -->
+    <div class="expertise-row reverse">
+      <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80" alt="Cargo Ship" class="expertise-img">
+      <div class="expertise-text">
         <h3>How We Drive Your Logistics Success</h3>
         <p>As a leading clearing and forwarding provider, we offer a comprehensive range of services to streamline your import/export operations. From documentation to transportation, our expert team ensures a smooth experience, including support for obtaining your import and export license.</p>
       </div>
     </div>
+
   </section>
 
   <!-- DIVERSE GOODS SECTION -->
@@ -224,18 +245,18 @@
       <div class="goods-item"><i class="fa-solid fa-laptop"></i><span>Computer Hardware</span></div>
       <div class="goods-item"><i class="fa-solid fa-network-wired"></i><span>Networking Device</span></div>
       <div class="goods-item"><i class="fa-solid fa-code"></i><span>Software</span></div>
-      <div class="goods-item"><i class="fa-solid fa-pills"></i><span>Pharmaceutical Products</span></div>
+      <div class="goods-item"><i class="fa-solid fa-pills"></i><span>Pharmaceuticals</span></div>
       <div class="goods-item"><i class="fa-solid fa-burger"></i><span>Food Items</span></div>
       <div class="goods-item"><i class="fa-solid fa-industry"></i><span>Industrial Materials</span></div>
       <div class="goods-item"><i class="fa-solid fa-cubes"></i><span>Raw Materials</span></div>
-      <div class="goods-item"><i class="fa-solid fa-building-shield"></i><span>Government Consignment</span></div>
+      <div class="goods-item"><i class="fa-solid fa-building-shield"></i><span>Govt. Consignment</span></div>
       <div class="goods-item"><i class="fa-solid fa-shirt"></i><span>Garments Products</span></div>
       <div class="goods-item"><i class="fa-solid fa-box"></i><span>Parcel</span></div>
       <div class="goods-item"><i class="fa-solid fa-ellipsis"></i><span>Others</span></div>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
+  <!-- SERVICES SECTION (With Pictures) -->
   <section class="section-container">
     <div class="services-layout">
       <div class="services-text">
@@ -243,25 +264,37 @@
         <p>We offer a range of logistics solutions, including cross-border air and sea transport and inland road transport. Our C&F services ensure smooth import compliance, with warehousing solutions for safe storage and timely deliveries.</p>
       </div>
       <div class="service-cards-grid">
+        <!-- Service 1 -->
         <div class="service-card">
-          <i class="fa-solid fa-boxes-packing"></i>
-          <h4>Customs Clearing & Forwarding</h4>
-          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" alt="Customs Clearance">
+          <div class="service-content">
+            <h4>Customs Clearing & Forwarding</h4>
+            <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          </div>
         </div>
+        <!-- Service 2 -->
         <div class="service-card">
-          <i class="fa-solid fa-truck-moving"></i>
-          <h4>Inland Road Transport</h4>
-          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=500&q=80" alt="Inland Transport">
+          <div class="service-content">
+            <h4>Inland Road Transport</h4>
+            <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          </div>
         </div>
+        <!-- Service 3 -->
         <div class="service-card">
-          <i class="fa-solid fa-ship"></i>
-          <h4>Cross-border Air & Sea Transport</h4>
-          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=500&q=80" alt="Air & Sea Transport">
+          <div class="service-content">
+            <h4>Cross-border Air & Sea Transport</h4>
+            <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          </div>
         </div>
+        <!-- Service 4 -->
         <div class="service-card">
-          <i class="fa-solid fa-user-shield"></i>
-          <h4>Importer of Record (IOR)</h4>
-          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="IOR">
+          <div class="service-content">
+            <h4>Importer of Record (IOR)</h4>
+            <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -272,7 +305,6 @@
     <h2>Our Clients</h2>
     <div class="marquee">
       <div class="marquee-content">
-        <!-- Dummy logos for rolling animation (Admin will add real ones later) -->
         <div class="client-logo"><i class="fa-solid fa-building"></i> CLIENT ONE</div>
         <div class="client-logo"><i class="fa-solid fa-city"></i> CLIENT TWO</div>
         <div class="client-logo"><i class="fa-solid fa-hotel"></i> CLIENT THREE</div>
@@ -302,7 +334,6 @@
         <div class="port-item"><i class="fa-solid fa-anchor"></i> <span>Pangaon Customs</span></div>
       </div>
       <div class="customs-logo">
-        <!-- Placeholder for Bangladesh Customs Logo -->
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Bangladesh_Customs_Logo.png/220px-Bangladesh_Customs_Logo.png" alt="Bangladesh Customs">
       </div>
     </div>
@@ -341,7 +372,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (With Map) -->
+  <!-- FOOTER (White Theme with Navy Bottom Bar) -->
   <footer>
     <div class="footer-container">
       
@@ -351,14 +382,19 @@
           <img src="logo.png" alt="Logo">
           <h3>M/S. JAMUNA TRADERS</h3>
         </div>
-        <p style="margin-bottom: 5px;">Contact Us</p>
+        <p style="margin-bottom: 5px; font-weight: 500; color: #0f2b46;">Contact Us</p>
         <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
         <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
-        <p style="margin-top: 15px;">Social Links</p>
+        <p style="margin-top: 15px; font-weight: 500; color: #0f2b46;">Social Links</p>
+        
+        <!-- All Social Icons -->
         <div class="social-links">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Google Map"><i class="fa-solid fa-map-location-dot"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
       </div>
@@ -369,11 +405,11 @@
         <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
       </div>
 
-      <!-- Col 3: Branch Office -->
+      <!-- Col 3: Branch Offices -->
       <div class="footer-box">
         <h4>Chattogram Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
-        <h4 style="margin-top: 20px;">Benapole Office</h4>
+        <h4 style="margin-top: 25px;">Benapole Office</h4>
         <p><i class="fa-solid fa-location-dot"></i> Nurjahan Mansion, C&F Agent Building Road, Benapole, Jessore.</p>
       </div>
 
@@ -381,12 +417,13 @@
       <div class="footer-box">
         <h4>Location Map</h4>
         <div class="map-container">
-          <!-- Dhaka Map Placeholder -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
 
     </div>
+    
+    <!-- Navy Blue Bottom Bar -->
     <div class="footer-bottom">
       <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
     </div>
