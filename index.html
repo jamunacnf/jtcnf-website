@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M/S. JAMUNA TRADERS — Customs Clearing & Forwarding</title>
   
+  <!-- Browser Favicon (Tab Icon) -->
   <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
@@ -449,9 +454,9 @@
       </div>
     </div>
     
-    <!-- Footer Bottom with Privacy & Terms -->
+    <!-- Footer Bottom with Privacy & Terms & Auto Year -->
     <div class="footer-bottom" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 20px 10px;">
-      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+      <p>&copy; <span id="currentYear"></span> M/S. Jamuna Traders. All Rights Reserved.</p>
       <div style="display: flex; gap: 15px;">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms & Conditions</a>
@@ -459,14 +464,18 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Mobile Menu -->
+  <!-- JavaScript for Mobile Menu & Auto Year -->
   <script>
+    // Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
 
     menuToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
+
+    // Auto Update Copyright Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 
 </body>
