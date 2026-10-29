@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M/S. JAMUNA TRADERS — Customs Clearing & Forwarding</title>
   
-  <!-- Font Awesome for Icons -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background-color: #f4f7f6; color: #333; line-height: 1.6; overflow-x: hidden; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #ffffff; color: #333; line-height: 1.6; overflow-x: hidden; }
     
     /* ================= TOP BAR ================= */
     .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -18,118 +23,127 @@
     .social-icons a { color: white; font-size: 16px; transition: 0.3s; }
     .social-icons a:hover { color: #f39c12; transform: scale(1.2); }
     .top-actions { display: flex; gap: 15px; }
-    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 13px; color: white; transition: 0.3s; }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
-    .top-btn:hover { animation: none; transform: scale(1.05); }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(243, 156, 18, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0); }
-    }
+    .top-btn:hover { transform: scale(1.05); opacity: 0.9; }
 
     /* ================= HEADER ================= */
-    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
     .logo-container { display: flex; align-items: center; gap: 15px; }
-    .logo-icon { height: 60px; width: 60px; border-radius: 50%; border: 2px solid #f39c12; object-fit: cover; }
+    .logo-icon { height: 55px; width: 55px; border-radius: 50%; border: 2px solid #f39c12; object-fit: cover; }
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
-    .company-name h1 { font-size: 32px; font-weight: 900; letter-spacing: 1px; color: #0f2b46; margin-bottom: 5px; }
-    .company-name span { font-size: 13px; color: #f39c12; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .company-name h1 { font-size: 26px; font-weight: 700; color: #0f2b46; }
+    .company-name span { font-size: 11px; color: #f39c12; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
-    nav a { color: #0f2b46; text-decoration: none; font-weight: bold; font-size: 15px; transition: 0.3s; }
+    nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+    nav a { color: #333; text-decoration: none; font-weight: 500; font-size: 15px; transition: 0.3s; }
     nav a:hover, nav a.active { color: #f39c12; }
-    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; }
+    .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 600; }
     .nav-btn:hover { background-color: #e67e22; }
 
     /* ================= HERO SECTION ================= */
-    .hero { 
-      position: relative; 
-      height: 70vh; 
-      min-height: 500px;
-      display: flex; 
-      align-items: center; 
-      padding: 0 5%; 
-      /* Realistic Port/Container Background Image */
-      background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.5) 100%), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover;
-      background-attachment: fixed; /* Parallax effect */
-    }
-    
-    .hero-content { color: white; max-width: 850px; }
-    .hero h2 { font-size: 52px; margin-bottom: 20px; line-height: 1.2; font-weight: 900; }
-    .hero p { font-size: 18px; margin-bottom: 30px; color: #ddd; font-weight: 500; line-height: 1.8; }
-    
-    .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
-    .btn-primary { display: inline-block; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; background-color: #f39c12; color: white; transition: 0.3s; }
-    .btn-primary:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
+    .hero { position: relative; height: 70vh; min-height: 500px; display: flex; align-items: center; padding: 0 10%; background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.4) 100%), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover; }
+    .hero-content { color: white; max-width: 800px; }
+    .hero h2 { font-size: 50px; margin-bottom: 20px; line-height: 1.2; font-weight: 700; }
+    .hero p { font-size: 17px; margin-bottom: 30px; color: #eee; font-weight: 400; }
+    .btn-primary { display: inline-block; padding: 14px 32px; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 16px; background-color: #f39c12; color: white; transition: 0.3s; }
+    .btn-primary:hover { background-color: #e67e22; transform: translateY(-3px); }
 
     /* ================= GENERAL SECTIONS ================= */
     .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
     .section-title { text-align: center; margin-bottom: 50px; }
-    .section-title h2 { font-size: 36px; color: #0f2b46; font-weight: 800; margin-bottom: 10px; }
+    .section-title h2 { font-size: 34px; color: #0f2b46; font-weight: 700; margin-bottom: 15px; }
     .section-title p { color: #666; font-size: 16px; max-width: 700px; margin: 0 auto; }
 
-    /* ================= EXPERTISE & INFO ================= */
-    .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .expertise-text h3 { font-size: 28px; color: #0f2b46; margin-bottom: 15px; }
-    .expertise-text p { color: #555; margin-bottom: 15px; font-size: 16px; }
-    .expertise-img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    /* ================= EXPERTISE SECTION ================= */
+    .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .expertise-img-container img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .expertise-text h3 { font-size: 28px; color: #0f2b46; margin-bottom: 15px; font-weight: 700; }
+    .expertise-text p { color: #555; margin-bottom: 25px; font-size: 16px; }
 
-    /* ================= DIVERSES GOODS ================= */
-    .goods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center; margin-top: 30px; }
-    .goods-item { background: white; padding: 20px 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
-    .goods-item:hover { background: #0f2b46; color: white; transform: translateY(-5px); }
-    .goods-item i { font-size: 30px; color: #f39c12; margin-bottom: 10px; display: block; }
-    .goods-item span { font-weight: bold; font-size: 14px; }
+    /* ================= DIVERSE GOODS ================= */
+    .goods-bg { background-color: #f9f9f9; padding: 80px 20px; }
+    .goods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .goods-item { background: white; padding: 30px 20px; border-radius: 5px; text-align: center; border: 1px solid #eee; transition: all 0.3s ease; }
+    .goods-item:hover { border-color: #f39c12; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .goods-item i { font-size: 35px; color: #f39c12; margin-bottom: 15px; display: block; }
+    .goods-item span { font-weight: 600; font-size: 15px; color: #333; }
 
-    /* ================= SERVICES CARDS ================= */
-    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .service-card { background: white; padding: 30px; border-radius: 10px; border-top: 4px solid #f39c12; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .service-card h3 { color: #0f2b46; margin-bottom: 15px; font-size: 20px; }
-    .service-card p { color: #666; margin-bottom: 15px; font-size: 15px; }
-    .service-card a { color: #f39c12; font-weight: bold; text-decoration: none; }
+    /* ================= SERVICES SECTION ================= */
+    .services-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+    .services-text h2 { font-size: 34px; color: #0f2b46; margin-bottom: 20px; font-weight: 700; }
+    .services-text p { color: #555; font-size: 16px; line-height: 1.8; }
+    .service-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .service-card { border: 1px solid #eee; padding: 30px 20px; border-radius: 5px; text-align: center; transition: 0.3s; }
+    .service-card:hover { border-color: #f39c12; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .service-card i { font-size: 30px; color: #f39c12; margin-bottom: 15px; }
+    .service-card h4 { font-size: 18px; color: #0f2b46; margin-bottom: 10px; font-weight: 600; }
+    .service-card a { display: inline-block; margin-top: 15px; color: #333; font-size: 13px; font-weight: 600; text-decoration: none; text-transform: uppercase; }
+    .service-card a:hover { color: #f39c12; }
 
-    /* ================= PORTS ================= */
-    .ports-section { background: #0f2b46; color: white; padding: 80px 20px; }
-    .ports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto 0; }
-    .port-item { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 8px; text-align: center; transition: 0.3s; }
-    .port-item:hover { background: #f39c12; color: white; }
-    .port-item i { font-size: 35px; margin-bottom: 15px; color: #f39c12; }
-    .port-item:hover i { color: white; }
-    .port-item h4 { font-size: 18px; }
+    /* ================= CLIENTS MARQUEE ================= */
+    .clients-section { background: #f4f7f6; padding: 50px 0; overflow: hidden; }
+    .clients-section h2 { text-align: center; color: #0f2b46; margin-bottom: 30px; font-size: 28px; }
+    .marquee { display: flex; overflow: hidden; user-select: none; gap: 50px; }
+    .marquee-content { display: flex; gap: 50px; animation: scroll 20s linear infinite; }
+    .client-logo { font-size: 24px; font-weight: bold; color: #888; opacity: 0.6; display: flex; align-items: center; gap: 10px; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 50px)); } }
 
-    /* ================= BLOG ================= */
+    /* ================= PORTS SECTION ================= */
+    .ports-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .ports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .port-item { border: 1px solid #eee; padding: 20px; border-radius: 5px; display: flex; align-items: center; gap: 15px; transition: 0.3s; }
+    .port-item:hover { border-color: #f39c12; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    .port-item i { font-size: 24px; color: #f39c12; }
+    .port-item span { font-weight: 600; color: #333; font-size: 15px; }
+    .customs-logo img { width: 100%; max-width: 300px; display: block; margin: 0 auto; }
+
+    /* ================= BLOG SECTION ================= */
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .blog-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    .blog-card { background: white; border: 1px solid #eee; border-radius: 5px; overflow: hidden; transition: 0.3s; }
+    .blog-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     .blog-card img { width: 100%; height: 200px; object-fit: cover; }
-    .blog-content { padding: 20px; }
-    .blog-content h4 { font-size: 18px; margin-bottom: 10px; color: #0f2b46; }
-    .blog-content p { font-size: 14px; color: #666; margin-bottom: 15px; }
-    .blog-content a { color: #f39c12; font-weight: bold; text-decoration: none; }
+    .blog-content { padding: 25px; }
+    .blog-content h4 { font-size: 18px; color: #0f2b46; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+    .blog-content p { color: #666; font-size: 14px; margin-bottom: 15px; }
 
     /* ================= FOOTER ================= */
     footer { background-color: #0a1c2e; color: #ddd; padding: 60px 20px 20px; font-size: 14px; }
-    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-box h4 { color: #f39c12; margin-bottom: 20px; font-size: 20px; border-bottom: 1px solid #1a3a5c; padding-bottom: 10px; }
-    .footer-box p { margin-bottom: 10px; line-height: 1.8; color: #bbb; }
-    .footer-box a { color: #ddd; text-decoration: none; transition: 0.3s; }
-    .footer-box a:hover { color: #f39c12; }
-    .social-links { margin: 15px 0; display: flex; gap: 10px; }
-    .social-links a { background: #1a3a5c; padding: 10px; border-radius: 50%; text-align: center; color: white; }
-    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: bold; text-decoration: none; }
-    .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .footer-logo img { height: 40px; border-radius: 50%; }
+    .footer-logo h3 { color: white; font-size: 20px; font-weight: 700; }
     
+    .footer-box h4 { color: white; margin-bottom: 20px; font-size: 18px; font-weight: 600; }
+    .footer-box p { margin-bottom: 12px; color: #bbb; line-height: 1.6; display: flex; gap: 10px; }
+    .footer-box p i { color: #f39c12; margin-top: 5px; }
+    .footer-box a { color: #bbb; text-decoration: none; transition: 0.3s; }
+    .footer-box a:hover { color: #f39c12; }
+    
+    .social-links { display: flex; gap: 10px; margin-top: 15px; }
+    .social-links a { background: #1a3a5c; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; }
+    .social-links a:hover { background: #f39c12; }
+    
+    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: 12px; }
+    
+    .map-container iframe { width: 100%; height: 200px; border: none; border-radius: 5px; }
+    
+    .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
+
     /* ================= RESPONSIVE ================= */
     @media (max-width: 1024px) {
       .top-bar { flex-direction: column; gap: 15px; }
       header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
       .logo-container { flex-direction: column; text-align: center; }
       nav ul { flex-wrap: wrap; justify-content: center; }
-      .hero { height: auto; padding: 80px 20px; background-attachment: scroll; }
-      .hero h2 { font-size: 38px; }
-      .expertise-grid { grid-template-columns: 1fr; }
+      .hero { height: auto; padding: 80px 20px; text-align: center; background-attachment: scroll; }
+      .hero h2 { font-size: 36px; }
+      .expertise-grid, .services-layout, .ports-layout { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .service-cards-grid, .ports-grid, .footer-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -180,9 +194,7 @@
     <div class="hero-content">
       <h2>Most Trusted Clearing & Forwarding Agent in Bangladesh</h2>
       <p>M/S. Jamuna Traders ensures fast, cost-effective, and secure customs clearance across all major ports, including Chattogram Sea Port, Dhaka Air Cargo, and Land Ports. We provide end-to-end professional freight coordination for your seamless import and export needs.</p>
-      <div class="hero-buttons">
-        <a href="quote.html" class="btn-primary">Request a Quote</a>
-      </div>
+      <a href="quote.html" class="btn-primary">Request a Quote</a>
     </div>
   </section>
 
@@ -190,148 +202,194 @@
   <section class="section-container">
     <div class="expertise-grid">
       <div class="expertise-img-container">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Cargo Containers" class="expertise-img">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Cargo Containers">
       </div>
       <div class="expertise-text">
-        <h3>Trusted Expertise in Hassle-Free Customs Clearing</h3>
-        <p>For years, we’ve been providing tension-free customs clearance and logistics solutions. Our data-driven strategies and streamlined procedures ensure fast, cost-effective, and reliable services for businesses of all sizes.</p>
-        <h3 style="margin-top: 20px;">How We Drive Your Logistics Success</h3>
-        <p>As a leading clearing and forwarding provider, we offer a comprehensive range of services to streamline your import/export operations. From documentation to transportation, our expert team ensures a smooth experience.</p>
+        <h3>50 Years of Expertise in Hassle-Free Customs Clearing</h3>
+        <p>For over 50 years, we’ve been providing tension-free customs clearance and logistics solutions. Our data-driven strategies and streamlined procedures ensure fast, cost-effective, and reliable services for businesses of all sizes.</p>
+        <h3>How We Drive Your Logistics Success</h3>
+        <p>As a leading clearing and forwarding provider, we offer a comprehensive range of services to streamline your import/export operations. From documentation to transportation, our expert team ensures a smooth experience, including support for obtaining your import and export license.</p>
       </div>
     </div>
   </section>
 
-  <!-- DIVERSES GOODS SECTION -->
-  <section class="section-container" style="background-color: #fff; max-width: 100%;">
+  <!-- DIVERSE GOODS SECTION -->
+  <section class="goods-bg">
     <div class="section-title">
       <h2>Diverse Goods, Expert Clearance</h2>
-      <p>We handle various goods with precision and efficiency. Our expertise ensures a seamless import experience for all types of products.</p>
+      <p>We handle various goods, from electronics to pharmaceuticals, with precision and efficiency. Our customs regulations and logistics expertise ensures a seamless import experience.</p>
     </div>
-    <div class="goods-grid" style="max-width: 1200px; margin: 0 auto;">
+    <div class="goods-grid">
       <div class="goods-item"><i class="fa-solid fa-tv"></i><span>Consumer Electronics</span></div>
       <div class="goods-item"><i class="fa-solid fa-laptop"></i><span>Computer Hardware</span></div>
-      <div class="goods-item"><i class="fa-solid fa-network-wired"></i><span>Networking Devices</span></div>
-      <div class="goods-item"><i class="fa-solid fa-pills"></i><span>Pharmaceuticals</span></div>
+      <div class="goods-item"><i class="fa-solid fa-network-wired"></i><span>Networking Device</span></div>
+      <div class="goods-item"><i class="fa-solid fa-code"></i><span>Software</span></div>
+      <div class="goods-item"><i class="fa-solid fa-pills"></i><span>Pharmaceutical Products</span></div>
       <div class="goods-item"><i class="fa-solid fa-burger"></i><span>Food Items</span></div>
       <div class="goods-item"><i class="fa-solid fa-industry"></i><span>Industrial Materials</span></div>
+      <div class="goods-item"><i class="fa-solid fa-cubes"></i><span>Raw Materials</span></div>
+      <div class="goods-item"><i class="fa-solid fa-building-shield"></i><span>Government Consignment</span></div>
       <div class="goods-item"><i class="fa-solid fa-shirt"></i><span>Garments Products</span></div>
-      <div class="goods-item"><i class="fa-solid fa-box"></i><span>Parcel & Others</span></div>
+      <div class="goods-item"><i class="fa-solid fa-box"></i><span>Parcel</span></div>
+      <div class="goods-item"><i class="fa-solid fa-ellipsis"></i><span>Others</span></div>
     </div>
   </section>
 
-  <!-- SERVICES WE PROVIDE -->
+  <!-- SERVICES SECTION -->
   <section class="section-container">
-    <div class="section-title">
-      <h2>Services We Provide</h2>
-      <p>We offer a range of logistics solutions, including cross-border air and sea transport and inland road transport.</p>
-    </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Customs Clearing & Forwarding</h3>
-        <p>Complete end-to-end customs clearance services for both imports and exports at all major ports in Bangladesh.</p>
-        <a href="services.html">Read More →</a>
+    <div class="services-layout">
+      <div class="services-text">
+        <h2>Services We Provide</h2>
+        <p>We offer a range of logistics solutions, including cross-border air and sea transport and inland road transport. Our C&F services ensure smooth import compliance, with warehousing solutions for safe storage and timely deliveries.</p>
       </div>
-      <div class="service-card">
-        <h3>Inland Road Transport</h3>
-        <p>Reliable road transport services for moving your cargo efficiently from ports to your warehouse or factory.</p>
-        <a href="services.html">Read More →</a>
-      </div>
-      <div class="service-card">
-        <h3>Cross-border Air & Sea Transport</h3>
-        <p>International freight forwarding by air and sea, ensuring your goods arrive on time and safely.</p>
-        <a href="services.html">Read More →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAJOR PORTS SECTION -->
-  <section class="ports-section">
-    <div class="section-title">
-      <h2 style="color: white;">Serving Major Ports Across Bangladesh</h2>
-      <p style="color: #ccc;">We are your one-stop shop for efficient customs clearance at all major ports.</p>
-    </div>
-    <div class="ports-grid">
-      <div class="port-item">
-        <i class="fa-solid fa-plane"></i>
-        <h4>Dhaka Customs (AFU)</h4>
-      </div>
-      <div class="port-item">
-        <i class="fa-solid fa-train"></i>
-        <h4>ICD Kamalapur Customs</h4>
-      </div>
-      <div class="port-item">
-        <i class="fa-solid fa-ship"></i>
-        <h4>Chattogram Customs</h4>
-      </div>
-      <div class="port-item">
-        <i class="fa-solid fa-truck"></i>
-        <h4>Benapole Customs</h4>
-      </div>
-      <div class="port-item">
-        <i class="fa-solid fa-anchor"></i>
-        <h4>Pangaon Customs</h4>
+      <div class="service-cards-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-boxes-packing"></i>
+          <h4>Customs Clearing & Forwarding</h4>
+          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-truck-moving"></i>
+          <h4>Inland Road Transport</h4>
+          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-ship"></i>
+          <h4>Cross-border Air & Sea Transport</h4>
+          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-user-shield"></i>
+          <h4>Importer of Record (IOR)</h4>
+          <a href="services.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- LATEST BLOG -->
-  <section class="section-container" style="background-color: #f4f7f6; max-width: 100%;">
+  <!-- OUR CLIENTS (MARQUEE) -->
+  <section class="clients-section">
+    <h2>Our Clients</h2>
+    <div class="marquee">
+      <div class="marquee-content">
+        <!-- Dummy logos for rolling animation (Admin will add real ones later) -->
+        <div class="client-logo"><i class="fa-solid fa-building"></i> CLIENT ONE</div>
+        <div class="client-logo"><i class="fa-solid fa-city"></i> CLIENT TWO</div>
+        <div class="client-logo"><i class="fa-solid fa-hotel"></i> CLIENT THREE</div>
+        <div class="client-logo"><i class="fa-solid fa-store"></i> CLIENT FOUR</div>
+        <div class="client-logo"><i class="fa-solid fa-warehouse"></i> CLIENT FIVE</div>
+        <div class="client-logo"><i class="fa-solid fa-building"></i> CLIENT ONE</div>
+        <div class="client-logo"><i class="fa-solid fa-city"></i> CLIENT TWO</div>
+        <div class="client-logo"><i class="fa-solid fa-hotel"></i> CLIENT THREE</div>
+        <div class="client-logo"><i class="fa-solid fa-store"></i> CLIENT FOUR</div>
+        <div class="client-logo"><i class="fa-solid fa-warehouse"></i> CLIENT FIVE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTS SECTION -->
+  <section class="section-container">
+    <div class="section-title" style="text-align: left; max-width: 1200px; margin: 0 auto 40px;">
+      <h2>Serving Major Ports Across Bangladesh</h2>
+      <p style="margin: 0;">We are your one-stop shop for efficient customs clearance at all of the major ports. Our carrying and forwarding services ensure effective import and export management.</p>
+    </div>
+    <div class="ports-layout">
+      <div class="ports-grid">
+        <div class="port-item"><i class="fa-solid fa-plane"></i> <span>Dhaka Customs (AFU)</span></div>
+        <div class="port-item"><i class="fa-solid fa-train"></i> <span>ICD Kamalapur Customs</span></div>
+        <div class="port-item"><i class="fa-solid fa-ship"></i> <span>Chattogram Customs</span></div>
+        <div class="port-item"><i class="fa-solid fa-truck"></i> <span>Benapole Customs</span></div>
+        <div class="port-item"><i class="fa-solid fa-anchor"></i> <span>Pangaon Customs</span></div>
+      </div>
+      <div class="customs-logo">
+        <!-- Placeholder for Bangladesh Customs Logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Bangladesh_Customs_Logo.png/220px-Bangladesh_Customs_Logo.png" alt="Bangladesh Customs">
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST BLOG SECTION -->
+  <section class="goods-bg">
     <div class="section-title">
       <h2>Latest Blog</h2>
-      <p>Stay updated with the latest news in customs clearing and logistics.</p>
     </div>
     <div class="blog-grid" style="max-width: 1200px; margin: 0 auto;">
       <div class="blog-card">
         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="Blog 1">
         <div class="blog-content">
-          <h4>Inland Road Transport in Bangladesh</h4>
+          <h4>Inland Road Transport in Bangladesh: A Complete Guide</h4>
           <p>A complete guide for reliable freight movement across the country.</p>
-          <a href="blog.html">Read More →</a>
+          <a href="blog.html" class="btn-primary" style="padding: 8px 15px; font-size: 13px;">Read More</a>
         </div>
       </div>
       <div class="blog-card">
         <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" alt="Blog 2">
         <div class="blog-content">
-          <h4>Customs Clearance Explained</h4>
-          <p>What it is and why it matters for importers in Bangladesh.</p>
-          <a href="blog.html">Read More →</a>
+          <h4>Customs Clearance Explained: What It Is and Why It Matters</h4>
+          <p>Learn why customs clearance is crucial for importers in Bangladesh.</p>
+          <a href="blog.html" class="btn-primary" style="padding: 8px 15px; font-size: 13px;">Read More</a>
         </div>
       </div>
       <div class="blog-card">
         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Blog 3">
         <div class="blog-content">
-          <h4>Role of an Importer of Record (IOR)</h4>
-          <p>How to import goods without a local presence in the country.</p>
-          <a href="blog.html">Read More →</a>
+          <h4>How to Import Goods Without a Local Presence</h4>
+          <p>Discover the role of an Importer of Record (IOR) in global trade.</p>
+          <a href="blog.html" class="btn-primary" style="padding: 8px 15px; font-size: 13px;">Read More</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (With Map) -->
   <footer>
     <div class="footer-container">
+      
+      <!-- Col 1: Company Info -->
       <div class="footer-box">
-        <h4>Contact Us</h4>
-        <p><strong>Phone:</strong> <a href="tel:+8801811470616">+880 1811470616</a></p>
-        <p><strong>Email:</strong> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
+        <div class="footer-logo">
+          <img src="logo.png" alt="Logo">
+          <h3>M/S. JAMUNA TRADERS</h3>
+        </div>
+        <p style="margin-bottom: 5px;">Contact Us</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801811470616">+880 1811470616</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
+        <p style="margin-top: 15px;">Social Links</p>
         <div class="social-links">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <a href="company-profile.pdf" download class="download-btn"><i class="fa-solid fa-download"></i> Download Profile</a>
+        <a href="company-profile.pdf" download class="download-btn">Download Profile</a>
       </div>
+
+      <!-- Col 2: Head Office -->
       <div class="footer-box">
         <h4>Head Office</h4>
-        <p>M/S. Jamuna Traders<br>[এখানে আপনার হেড অফিসের ঠিকানা লিখুন]<br>Dhaka, Bangladesh.</p>
+        <p><i class="fa-solid fa-location-dot"></i> Shamsur Rahman Bhaban (2nd Floor), 18 Rajuk Avenue, Motijheel, Dhaka-1000.</p>
       </div>
+
+      <!-- Col 3: Branch Office -->
       <div class="footer-box">
-        <h4>Service Offices</h4>
-        <p><strong>Dhaka Airport:</strong><br> [এখানে এয়ারপোর্ট অফিসের ঠিকানা লিখুন]</p>
-        <p><strong>Chattogram Port:</strong><br> [এখানে চট্টগ্রাম অফিসের ঠিকানা লিখুন]</p>
+        <h4>Chattogram Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Six Star Building, 413/B, Agrabad C/A, Chattogram.</p>
+        <h4 style="margin-top: 20px;">Benapole Office</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Nurjahan Mansion, C&F Agent Building Road, Benapole, Jessore.</p>
       </div>
+
+      <!-- Col 4: Google Map -->
+      <div class="footer-box">
+        <h4>Location Map</h4>
+        <div class="map-container">
+          <!-- Dhaka Map Placeholder -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.454188115666!2d90.41580831541542!3d23.72726128459545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c1d1c4d5b%3A0xe54d5da1e2f04d5c!2sMotijheel%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1620000000000!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-bottom"><p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p></div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 M/S. Jamuna Traders. All Rights Reserved.</p>
+    </div>
   </footer>
 
 </body>
