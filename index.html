@@ -13,40 +13,15 @@
     body { background-color: #f4f7f6; color: #333; line-height: 1.6; overflow-x: hidden; }
     
     /* ================= TOP BAR ================= */
-    .top-bar { 
-      background-color: #0a1c2e; 
-      color: white; 
-      padding: 10px 20px; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      gap: 20px; 
-      flex-wrap: wrap;
-    }
-    
-    /* Social Icons */
+    .top-bar { background-color: #0a1c2e; color: white; padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
     .social-icons { display: flex; gap: 15px; }
     .social-icons a { color: white; font-size: 16px; transition: 0.3s; }
     .social-icons a:hover { color: #f39c12; transform: scale(1.2); }
-    
-    /* Animated Buttons */
     .top-actions { display: flex; gap: 15px; }
-    .top-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-      color: white;
-      animation: pulse 2s infinite;
-      transition: 0.3s;
-    }
+    .top-btn { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px; color: white; animation: pulse 2s infinite; transition: 0.3s; }
     .btn-email { background-color: #f39c12; }
     .btn-wa { background-color: #25D366; }
-    .top-btn:hover { animation: none; transform: scale(1.05); color: white; }
+    .top-btn:hover { animation: none; transform: scale(1.05); }
     
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7); }
@@ -55,8 +30,7 @@
     }
 
     /* ================= HEADER ================= */
-    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    
+    header { background-color: #ffffff; color: #0a1c2e; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
     .logo-container { display: flex; align-items: center; gap: 15px; }
     .logo-icon { height: 60px; width: 60px; border-radius: 50%; border: 2px solid #f39c12; object-fit: cover; }
     .company-name { display: flex; flex-direction: column; line-height: 1.1; }
@@ -69,97 +43,71 @@
     .nav-btn { background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 5px; }
     .nav-btn:hover { background-color: #e67e22; }
 
-    /* ================= HERO SECTION WITH VIDEO ================= */
+    /* ================= HERO SECTION ================= */
     .hero { 
       position: relative; 
-      height: 80vh; 
-      min-height: 600px;
+      height: 70vh; 
+      min-height: 500px;
       display: flex; 
       align-items: center; 
       padding: 0 5%; 
-      overflow: hidden;
+      /* Realistic Port/Container Background Image */
+      background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.5) 100%), url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1920&q=80') center/cover;
+      background-attachment: fixed; /* Parallax effect */
     }
     
-    /* Video Background */
-    .hero-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    
-    /* Overlay for readability */
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(10, 28, 46, 0.9) 0%, rgba(10, 28, 46, 0.4) 100%);
-      z-index: 0;
-    }
-    
-    .hero-content { 
-      position: relative; 
-      z-index: 1; 
-      color: white; 
-      max-width: 800px; 
-    }
-    .hero h2 { font-size: 55px; margin-bottom: 20px; line-height: 1.1; font-weight: 900; }
-    .hero p { font-size: 18px; margin-bottom: 40px; color: #ddd; max-width: 650px; font-weight: 500; }
+    .hero-content { color: white; max-width: 850px; }
+    .hero h2 { font-size: 52px; margin-bottom: 20px; line-height: 1.2; font-weight: 900; }
+    .hero p { font-size: 18px; margin-bottom: 30px; color: #ddd; font-weight: 500; line-height: 1.8; }
     
     .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
-    .btn-primary { 
-      display: inline-block; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; transition: 0.3s;
-      background-color: #f39c12; color: white; 
-    }
+    .btn-primary { display: inline-block; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; background-color: #f39c12; color: white; transition: 0.3s; }
     .btn-primary:hover { background-color: #e67e22; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); }
-    
-    .btn-secondary { 
-      display: inline-block; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; transition: 0.3s;
-      background-color: transparent; border: 2px solid white; color: white; 
-    }
-    .btn-secondary:hover { background-color: white; color: #0f2b46; transform: translateY(-3px); }
 
-    /* ================= SERVICES SECTION ================= */
-    .services { padding: 100px 20px; max-width: 1300px; margin: 0 auto; text-align: center; }
-    .services h2 { color: #0f2b46; font-size: 38px; margin-bottom: 15px; font-weight: 800; }
-    .services-subtext { color: #666; margin-bottom: 50px; font-size: 16px; }
-    
+    /* ================= GENERAL SECTIONS ================= */
+    .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-size: 36px; color: #0f2b46; font-weight: 800; margin-bottom: 10px; }
+    .section-title p { color: #666; font-size: 16px; max-width: 700px; margin: 0 auto; }
+
+    /* ================= EXPERTISE & INFO ================= */
+    .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .expertise-text h3 { font-size: 28px; color: #0f2b46; margin-bottom: 15px; }
+    .expertise-text p { color: #555; margin-bottom: 15px; font-size: 16px; }
+    .expertise-img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+    /* ================= DIVERSES GOODS ================= */
+    .goods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center; margin-top: 30px; }
+    .goods-item { background: white; padding: 20px 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+    .goods-item:hover { background: #0f2b46; color: white; transform: translateY(-5px); }
+    .goods-item i { font-size: 30px; color: #f39c12; margin-bottom: 10px; display: block; }
+    .goods-item span { font-weight: bold; font-size: 14px; }
+
+    /* ================= SERVICES CARDS ================= */
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    
-    /* Service Card with Image and Animation */
-    .service-card { 
-      background: white; 
-      border-radius: 10px; 
-      overflow: hidden; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-      transition: all 0.4s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
-    
-    .service-img { width: 100%; height: 200px; object-fit: cover; }
-    
-    .service-content { padding: 25px; text-align: left; flex-grow: 1; display: flex; flex-direction: column; }
-    .service-content h3 { color: #0f2b46; margin-bottom: 10px; font-size: 22px; font-weight: 700; }
-    .service-content p { font-size: 15px; color: #666; flex-grow: 1; }
-    
-    .service-link { 
-      display: inline-block; 
-      margin-top: 20px; 
-      color: #f39c12; 
-      font-weight: bold; 
-      text-decoration: none; 
-      transition: 0.3s;
-    }
-    .service-link:hover { color: #e67e22; }
-    .service-link i { margin-left: 5px; transition: 0.3s; }
-    .service-link:hover i { transform: translateX(5px); }
+    .service-card { background: white; padding: 30px; border-radius: 10px; border-top: 4px solid #f39c12; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .service-card h3 { color: #0f2b46; margin-bottom: 15px; font-size: 20px; }
+    .service-card p { color: #666; margin-bottom: 15px; font-size: 15px; }
+    .service-card a { color: #f39c12; font-weight: bold; text-decoration: none; }
+
+    /* ================= PORTS ================= */
+    .ports-section { background: #0f2b46; color: white; padding: 80px 20px; }
+    .ports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto 0; }
+    .port-item { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 8px; text-align: center; transition: 0.3s; }
+    .port-item:hover { background: #f39c12; color: white; }
+    .port-item i { font-size: 35px; margin-bottom: 15px; color: #f39c12; }
+    .port-item:hover i { color: white; }
+    .port-item h4 { font-size: 18px; }
+
+    /* ================= BLOG ================= */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .blog-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    .blog-card img { width: 100%; height: 200px; object-fit: cover; }
+    .blog-content { padding: 20px; }
+    .blog-content h4 { font-size: 18px; margin-bottom: 10px; color: #0f2b46; }
+    .blog-content p { font-size: 14px; color: #666; margin-bottom: 15px; }
+    .blog-content a { color: #f39c12; font-weight: bold; text-decoration: none; }
 
     /* ================= FOOTER ================= */
     footer { background-color: #0a1c2e; color: #ddd; padding: 60px 20px 20px; font-size: 14px; }
@@ -169,9 +117,8 @@
     .footer-box a { color: #ddd; text-decoration: none; transition: 0.3s; }
     .footer-box a:hover { color: #f39c12; }
     .social-links { margin: 15px 0; display: flex; gap: 10px; }
-    .social-links a { background: #1a3a5c; padding: 10px; border-radius: 50%; text-align: center; }
-    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: bold; text-decoration: none; transition: 0.3s; }
-    .download-btn:hover { background-color: #e67e22; }
+    .social-links a { background: #1a3a5c; padding: 10px; border-radius: 50%; text-align: center; color: white; }
+    .download-btn { display: inline-block; background-color: #f39c12; color: white !important; padding: 10px 20px; border-radius: 4px; margin-top: 15px; font-weight: bold; text-decoration: none; }
     .footer-bottom { text-align: center; border-top: 1px solid #1a3a5c; padding-top: 20px; color: #888; font-size: 13px; }
     
     /* ================= RESPONSIVE ================= */
@@ -180,45 +127,36 @@
       header { flex-direction: column; gap: 20px; padding: 20px; text-align: center; }
       .logo-container { flex-direction: column; text-align: center; }
       nav ul { flex-wrap: wrap; justify-content: center; }
-      .hero { height: auto; padding: 100px 20px; }
+      .hero { height: auto; padding: 80px 20px; background-attachment: scroll; }
       .hero h2 { font-size: 38px; }
+      .expertise-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR (Social Icons & Animated Buttons) -->
+  <!-- TOP BAR -->
   <div class="top-bar">
-    <!-- Left Social Icons -->
     <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://maps.google.com" target="_blank" title="Location Map"><i class="fa-solid fa-map-location-dot"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
     </div>
-
-    <!-- Middle Animated Buttons -->
     <div class="top-actions">
-      <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email">
-        <i class="fa-solid fa-envelope"></i> Email Us
-      </a>
-      <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
+      <a href="mailto:jtcnf.bd@gmail.com" class="top-btn btn-email"><i class="fa-solid fa-envelope"></i> Email Us</a>
+      <a href="https://wa.me/8801811470616" target="_blank" class="top-btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     </div>
-
-    <!-- Right Social Icons -->
     <div class="social-icons">
-      <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
     </div>
   </div>
 
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <!-- Your Logo as Icon -->
-      <img src="logo.png" alt="M/S. Jamuna Traders Logo" class="logo-icon">
+      <img src="logo.png" alt="Logo" class="logo-icon">
       <div class="company-name">
         <h1>M/S. JAMUNA TRADERS</h1>
         <span>Govt. Authorised Customs Clearing & Forwarding Agent</span>
@@ -237,75 +175,136 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION WITH MOVING VIDEO BACKGROUND -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <!-- Free Stock Video of Cargo Ship -->
-    <video autoplay loop muted playsinline class="hero-video">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-cargo-ship-docked-at-a-port-41138-large.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    
-    <!-- Dark Overlay for text readability -->
-    <div class="hero-overlay"></div>
-
     <div class="hero-content">
-      <h2>Expert in Customs Clearing & Freight Forwarding</h2>
+      <h2>Most Trusted Clearing & Forwarding Agent in Bangladesh</h2>
       <p>M/S. Jamuna Traders ensures fast, cost-effective, and secure customs clearance across all major ports, including Chattogram Sea Port, Dhaka Air Cargo, and Land Ports. We provide end-to-end professional freight coordination for your seamless import and export needs.</p>
-      
       <div class="hero-buttons">
         <a href="quote.html" class="btn-primary">Request a Quote</a>
-        <a href="services.html" class="btn-secondary">Explore Services</a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES SECTION WITH IMAGES & HOVER ANIMATIONS -->
-  <section class="services">
-    <h2>Our Core Services</h2>
-    <p class="services-subtext">Providing reliable, government-authorised logistics solutions tailored to your business.</p>
-    
+  <!-- EXPERTISE SECTION -->
+  <section class="section-container">
+    <div class="expertise-grid">
+      <div class="expertise-img-container">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Cargo Containers" class="expertise-img">
+      </div>
+      <div class="expertise-text">
+        <h3>Trusted Expertise in Hassle-Free Customs Clearing</h3>
+        <p>For years, we’ve been providing tension-free customs clearance and logistics solutions. Our data-driven strategies and streamlined procedures ensure fast, cost-effective, and reliable services for businesses of all sizes.</p>
+        <h3 style="margin-top: 20px;">How We Drive Your Logistics Success</h3>
+        <p>As a leading clearing and forwarding provider, we offer a comprehensive range of services to streamline your import/export operations. From documentation to transportation, our expert team ensures a smooth experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVERSES GOODS SECTION -->
+  <section class="section-container" style="background-color: #fff; max-width: 100%;">
+    <div class="section-title">
+      <h2>Diverse Goods, Expert Clearance</h2>
+      <p>We handle various goods with precision and efficiency. Our expertise ensures a seamless import experience for all types of products.</p>
+    </div>
+    <div class="goods-grid" style="max-width: 1200px; margin: 0 auto;">
+      <div class="goods-item"><i class="fa-solid fa-tv"></i><span>Consumer Electronics</span></div>
+      <div class="goods-item"><i class="fa-solid fa-laptop"></i><span>Computer Hardware</span></div>
+      <div class="goods-item"><i class="fa-solid fa-network-wired"></i><span>Networking Devices</span></div>
+      <div class="goods-item"><i class="fa-solid fa-pills"></i><span>Pharmaceuticals</span></div>
+      <div class="goods-item"><i class="fa-solid fa-burger"></i><span>Food Items</span></div>
+      <div class="goods-item"><i class="fa-solid fa-industry"></i><span>Industrial Materials</span></div>
+      <div class="goods-item"><i class="fa-solid fa-shirt"></i><span>Garments Products</span></div>
+      <div class="goods-item"><i class="fa-solid fa-box"></i><span>Parcel & Others</span></div>
+    </div>
+  </section>
+
+  <!-- SERVICES WE PROVIDE -->
+  <section class="section-container">
+    <div class="section-title">
+      <h2>Services We Provide</h2>
+      <p>We offer a range of logistics solutions, including cross-border air and sea transport and inland road transport.</p>
+    </div>
     <div class="service-grid">
-      
-      <!-- Service 1 -->
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Import Clearance" class="service-img">
-        <div class="service-content">
-          <h3>Import Customs Clearance</h3>
-          <p>End-to-end customs clearance support for your import shipments. We handle all documentation, duty assessments, and rapid cargo release.</p>
-          <a href="services.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        <h3>Customs Clearing & Forwarding</h3>
+        <p>Complete end-to-end customs clearance services for both imports and exports at all major ports in Bangladesh.</p>
+        <a href="services.html">Read More →</a>
+      </div>
+      <div class="service-card">
+        <h3>Inland Road Transport</h3>
+        <p>Reliable road transport services for moving your cargo efficiently from ports to your warehouse or factory.</p>
+        <a href="services.html">Read More →</a>
+      </div>
+      <div class="service-card">
+        <h3>Cross-border Air & Sea Transport</h3>
+        <p>International freight forwarding by air and sea, ensuring your goods arrive on time and safely.</p>
+        <a href="services.html">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAJOR PORTS SECTION -->
+  <section class="ports-section">
+    <div class="section-title">
+      <h2 style="color: white;">Serving Major Ports Across Bangladesh</h2>
+      <p style="color: #ccc;">We are your one-stop shop for efficient customs clearance at all major ports.</p>
+    </div>
+    <div class="ports-grid">
+      <div class="port-item">
+        <i class="fa-solid fa-plane"></i>
+        <h4>Dhaka Customs (AFU)</h4>
+      </div>
+      <div class="port-item">
+        <i class="fa-solid fa-train"></i>
+        <h4>ICD Kamalapur Customs</h4>
+      </div>
+      <div class="port-item">
+        <i class="fa-solid fa-ship"></i>
+        <h4>Chattogram Customs</h4>
+      </div>
+      <div class="port-item">
+        <i class="fa-solid fa-truck"></i>
+        <h4>Benapole Customs</h4>
+      </div>
+      <div class="port-item">
+        <i class="fa-solid fa-anchor"></i>
+        <h4>Pangaon Customs</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST BLOG -->
+  <section class="section-container" style="background-color: #f4f7f6; max-width: 100%;">
+    <div class="section-title">
+      <h2>Latest Blog</h2>
+      <p>Stay updated with the latest news in customs clearing and logistics.</p>
+    </div>
+    <div class="blog-grid" style="max-width: 1200px; margin: 0 auto;">
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="Blog 1">
+        <div class="blog-content">
+          <h4>Inland Road Transport in Bangladesh</h4>
+          <p>A complete guide for reliable freight movement across the country.</p>
+          <a href="blog.html">Read More →</a>
         </div>
       </div>
-
-      <!-- Service 2 -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Export Clearance" class="service-img">
-        <div class="service-content">
-          <h3>Export Customs Clearance</h3>
-          <p>Efficient clearance processing for export cargo at major ports. We ensure your goods meet all regulatory compliance standards.</p>
-          <a href="services.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" alt="Blog 2">
+        <div class="blog-content">
+          <h4>Customs Clearance Explained</h4>
+          <p>What it is and why it matters for importers in Bangladesh.</p>
+          <a href="blog.html">Read More →</a>
         </div>
       </div>
-
-      <!-- Service 3 -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Air Cargo" class="service-img">
-        <div class="service-content">
-          <h3>Air Cargo Clearance</h3>
-          <p>Fast and reliable clearance services at Dhaka Airport. We prioritize urgent cargo and ensure minimal turnaround time.</p>
-          <a href="services.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Blog 3">
+        <div class="blog-content">
+          <h4>Role of an Importer of Record (IOR)</h4>
+          <p>How to import goods without a local presence in the country.</p>
+          <a href="blog.html">Read More →</a>
         </div>
       </div>
-
-      <!-- Service 4 -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=600&q=80" alt="Sea Cargo" class="service-img">
-        <div class="service-content">
-          <h3>Sea Cargo Clearance</h3>
-          <p>Comprehensive clearance solutions for sea shipments at Chattogram Port. Handling large containers with complete port coordination.</p>
-          <a href="services.html" class="service-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -317,9 +316,8 @@
         <p><strong>Phone:</strong> <a href="tel:+8801811470616">+880 1811470616</a></p>
         <p><strong>Email:</strong> <a href="mailto:jtcnf.bd@gmail.com">jtcnf.bd@gmail.com</a></p>
         <div class="social-links">
-          <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <a href="company-profile.pdf" download class="download-btn"><i class="fa-solid fa-download"></i> Download Profile</a>
       </div>
